@@ -104,11 +104,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- CONTACT -->
 ## Contact
-
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email
-
-
-
+sung hoon oh - oh@airar.co - email
 
 
 <!-- ACKNOWLEDGEMENTS -->
