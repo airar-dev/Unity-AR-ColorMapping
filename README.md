@@ -9,7 +9,7 @@
   <h3 align="center">ColorMapping</h3>
 
   <p align="center">
-    이 프로젝트는 MaxstAR, EasyAR, Vufoira, ARkit, ARcore 에 적용가능한 AR 컬러링 라이브러리 입니다.
+    이 프로젝트는 MaxstAR, EasyAR, Vuforia, ARkit, ARcore 에 적용가능한 AR 컬러링 라이브러리 입니다.
     <br />
    <a href="https://www.youtube.com/watch?v=I-WvBQRE2dw&feature=youtu.be">View Demo</a>
    
@@ -55,7 +55,7 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get a local copy up and running follow these simple steps.
+ZIP 파일 다운로드후 알맞은 곳에 압축해제 후 유니티3d로 프로젝트 열기
 
 ### Installation
  
@@ -64,6 +64,9 @@ To get a local copy up and running follow these simple steps.
 git clone https://github.com/airar-dev/ColorMapping.git
 ```
 
+2. AR 엔진 탑재
+
+MaxstAR, EasyAR, Vuforia, ARkit, ARcore 중에 적용할 엔진 임포트 
 
 
 <!-- USAGE EXAMPLES -->
