@@ -69,7 +69,9 @@ git clone https://github.com/airar-dev/ColorMapping.git
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+현재 MaxstAR 엔진과 연동 가능하게 작업중이며 1차 작업이 끝나면 
+
+사용 방법 자세히 기록 
 
 _For more examples, please refer to the [Documentation](http://airar.co.kr)_
 
