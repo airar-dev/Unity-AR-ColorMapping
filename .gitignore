@@ -8,3 +8,4 @@ Plugins.meta
 Plugins/Android.meta
 Plugins/Android/libopencv_java3.so.meta
 Plugins/Android/libOpenCVBridge.so.meta
+README.md.meta
