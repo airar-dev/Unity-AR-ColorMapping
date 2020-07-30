@@ -3,75 +3,55 @@ using UnityEngine;
 using System.Runtime.InteropServices;
 using System;
 using System.IO;
+using System.Collections;
+using UnityEngine.Networking;
 
 public class CallNativeCode : MonoBehaviour
 {
     [DllImport("AirarColorMap")]
-    private static extern float MyOpenCVTestMethod();
+    private static extern void ImageProc(string imgPath, float[] src, float[] dst, int height, int width);
 
-
-    [DllImport("AirarColorMap")]
-    private static extern IntPtr GetWarpTexture(IntPtr myTexture, double[] src, double[] dst, int height, int width);
-
+    private Texture2D myTe;
     public Texture2D m_Texture;
     public Renderer m_Renderer;
-    private Texture2D testTex;
+    
 
-    protected Color32[] m_Pixels;
-    protected GCHandle m_PixelsHandle;
-    protected IntPtr m_pixelPtr;
-    protected IntPtr m_tempPtr;
-
-    //7월 13일 검증 완료된 코드
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        //--------------------------------------------------------------------------------------//
-        double[] src = new double[] { 98, 70, 414, 190, 109, 386, 433, 370 };
-        double[] dst = new double[] { 0, 0, 512, 0, 0, 512, 512, 512 };
+        myTe = new Texture2D(m_Texture.width, m_Texture.height, TextureFormat.ARGB32, false);
 
-        //--------------------------------------------------------------------------------------//
-
-        m_Pixels = m_Texture.GetPixels32();
-        m_PixelsHandle = GCHandle.Alloc(m_Pixels, GCHandleType.Pinned);
-        m_pixelPtr = m_PixelsHandle.AddrOfPinnedObject();
+        float[] src = new float[] { 123, 123, 389, 123, 126, 420, 391, 416 };
+        float[] dst = new float[] { 0, 0, m_Texture.width, 0, 0, m_Texture.height, m_Texture.width, m_Texture.height };
 
 
-        m_tempPtr = GetWarpTexture(m_pixelPtr, src, dst, m_Texture.height, m_Texture.width);
+        //스샷 찍기 
+        File.WriteAllBytes(Application.persistentDataPath + "/test_img00.jpg", m_Texture.EncodeToJPG());
 
-        Texture2D myTe = new Texture2D(m_Texture.width, m_Texture.height, TextureFormat.RGBA32, false);
-        myTe.LoadRawTextureData(m_tempPtr, myTe.height * myTe.width * 4);
-        myTe.Apply();
+        //이미지 보정
+        ImageProc(Application.persistentDataPath + "/test_img00.jpg", src, dst,m_Texture.height,m_Texture.width);
 
-        File.WriteAllBytes(Application.persistentDataPath + "/test2.jpg", myTe.EncodeToJPG());
-        m_Renderer.material.mainTexture = myTe;
+        string path = Path.Combine(Application.persistentDataPath, "test_img00.jpg");
+        //보정된 이미지 3d객체에 적용
+        if (File.Exists(path))
+        {
+            StartCoroutine(LoadTexture(path));
+        }
     }
-    //7월 13일 검증 완료된 코드 여기까지
 
-
-    //unsafe void TextureToCVMat(Texture2D texData)
-    //{
-    //    Color32[] texDataColor = texData.GetPixels32();
-    //    //Pin Memory
-    //    fixed (Color32* p = texDataColor)
-    //    {
-    //        //TextureToCVMat((IntPtr)p, texData.width, texData.height);
-
-    //        testTex.LoadRawTextureData((IntPtr)p, m_Texture.height * m_Texture.width * 4);
-    //        testTex.Apply();
-
-    //        File.WriteAllBytes(Application.persistentDataPath + "/test2.jpg", testTex.EncodeToJPG());
-    //        m_Renderer.material.mainTexture = testTex;
-
-
-    //    }
-    //}
-
-
-    void OnGUI()
+    IEnumerator LoadTexture(string path)
     {
-        // This Line should display "Foopluginmethod: 10"
-        GUI.Label(new Rect(15, 125, 450, 100), "MyOpenCVTestMethod: " + MyOpenCVTestMethod());
+        
+        UnityWebRequest www = UnityWebRequestTexture.GetTexture("file://" + path);
+        yield return www.SendWebRequest();
 
+        if (!www.isNetworkError)
+        {
+            // Get text content like this:
+            //myTe.LoadImage(www.downloadHandler.data);
+            myTe = DownloadHandlerTexture.GetContent(www);
+            myTe.Apply();
+            m_Renderer.material.mainTexture = myTe;
+        }
     }
+
 }
