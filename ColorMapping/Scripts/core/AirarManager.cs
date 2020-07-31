@@ -23,7 +23,8 @@ public class AirarManager : AirarSingleton<AirarManager>
     {
         Texture2D dstTexture = new Texture2D(width, height);
 
-        string imgPath = FilePathUtil.GetImageSavePath("airar.jpg");
+        //string imgPath = FilePathUtil.GetImageSavePath("airar.jpg");
+        string imgPath = Path.Combine(Application.persistentDataPath, "airar.jpg");
 
         File.WriteAllBytes(imgPath, srcTexture.EncodeToJPG());
 

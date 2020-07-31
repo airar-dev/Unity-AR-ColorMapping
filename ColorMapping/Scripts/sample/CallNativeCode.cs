@@ -23,19 +23,23 @@ public class CallNativeCode : MonoBehaviour
         float[] src = new float[] { 123, 123, 389, 123, 126, 420, 391, 416 };
         float[] dst = new float[] { 0, 0, m_Texture.width, 0, 0, m_Texture.height, m_Texture.width, m_Texture.height };
 
-
-        //스샷 찍기 
-        File.WriteAllBytes(Application.persistentDataPath + "/test_img00.jpg", m_Texture.EncodeToJPG());
-
-        //이미지 보정
-        ImageProc(Application.persistentDataPath + "/test_img00.jpg", src,m_Texture.height,m_Texture.width);
-
-        string path = Path.Combine(Application.persistentDataPath, "test_img00.jpg");
-        //보정된 이미지 3d객체에 적용
-        if (File.Exists(path))
+        AirarManager.Instance.ProcessColoredMapTexture(m_Texture, src, 1024, 1024, (tex) =>
         {
-            StartCoroutine(LoadTexture(path));
-        }
+            m_Renderer.material.mainTexture = tex;
+        });
+
+        ////스샷 찍기 
+        //File.WriteAllBytes(Application.persistentDataPath + "/test_img00.jpg", m_Texture.EncodeToJPG());
+
+        ////이미지 보정
+        //ImageProc(Application.persistentDataPath + "/test_img00.jpg", src,m_Texture.height,m_Texture.width);
+
+        //string path = Path.Combine(Application.persistentDataPath, "test_img00.jpg");
+        ////보정된 이미지 3d객체에 적용
+        //if (File.Exists(path))
+        //{
+        //    StartCoroutine(LoadTexture(path));
+        //}
     }
 
     IEnumerator LoadTexture(string path)
