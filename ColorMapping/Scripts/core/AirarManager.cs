@@ -25,9 +25,7 @@ public class AirarManager : AirarSingleton<AirarManager>
 
         //string imgPath = FilePathUtil.GetImageSavePath("airar.jpg");
         string imgPath = Path.Combine(Application.persistentDataPath, "airar.jpg");
-
         File.WriteAllBytes(imgPath, srcTexture.EncodeToJPG());
-
         unsafe
         {
             ImageProc(imgPath, src, height, width);
