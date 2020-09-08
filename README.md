@@ -24,7 +24,6 @@
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
 * [Getting Started](#getting-started)
-  
   * [Installation](#installation)
 * [Usage](#usage)
 * [Roadmap](#roadmap)
@@ -39,9 +38,6 @@
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://www.youtube.com/watch?v=I-WvBQRE2dw&feature=youtu.be)
-
-
-* 
 
 
 ### Built With
