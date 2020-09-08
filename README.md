@@ -3,7 +3,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/airar-dev/ColorMapping">
-    <img src="http://dev.airar.co/ColorMapping/sample_0.gif" alt="Logo" width="80" height="80">
+    <img src="http://dev.airar.co/ColorMapping/logo_png.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">ColorMapping</h3>
@@ -130,4 +130,4 @@ sung hoon oh - oh@airar.co - email
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[product-screenshot]: http://dev.airar.co/ColorMapping/color.jpg
+[product-screenshot]: http://dev.airar.co/ColorMapping/sample_0.gif
