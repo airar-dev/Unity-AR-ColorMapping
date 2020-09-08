@@ -69,6 +69,7 @@ git clone https://github.com/airar-dev/ColorMapping.git
 MaxstAR, EasyAR, Vuforia, ARkit, ARcore 중에 적용할 엔진 임포트 
 
 
+
 <!-- USAGE EXAMPLES -->
 ## Usage
 
@@ -82,6 +83,10 @@ _For more examples, please refer to the [Documentation](http://airar.co.kr)_
 
 <!-- ROADMAP -->
 ## Roadmap
+
+- apply EasyAR
+- apply MaxstAR
+- apply arfoundation
 
 See the [open issues](https://github.com/airar-dev/ColorMapping/issues) for a list of proposed features (and known issues).
 
