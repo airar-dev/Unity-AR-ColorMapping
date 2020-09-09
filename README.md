@@ -72,15 +72,13 @@ with EasyAR
 
 1. 프로젝트에 EasyAR SDK를 임포트합니다.
 
-2. 씬에 'AirarManager.cs' 스크립트를 추가합니다.
-    
-    ![easyar-sc-1]
+2. 씬에 'AirarManager.cs' 스크립트를 추가합니다
+  ![easyar-sc-1]
     
 3. 씬에 EasyAR의 ImageTracking_Targets 프리팹을 추가합니다.
 
 4. 추가한 ImageTracking_Targets 오브젝트 최상위에 'EasyARColorMapping.cs'스크립트를 추가합니다.
-
-      ![easyar-sc-2]
+  ![easyar-sc-2]
       
 - ImageTargetController: ImageTracking_Targets 오브젝트
 - AR Contents: 증강시킬 3D 오브젝트
@@ -94,11 +92,10 @@ with MaxstAR
 1. 프로젝트에 MaxstAR SDK를 임포트합니다.
 
 2. 씬에 'AirarManager.cs' 스크립트를 추가합니다.
-
-![masxtar-sc-1]
+  ![masxtar-sc-1]
 
 4. 추가한 ImageTrackable 오브젝트 최상위에 'MaxstARColorMapping.cs'스크립트를 추가합니다.
-![masxtar-sc-1]
+  ![masxtar-sc-1]
 
 - ImageTargetController: ImageTrackable 오브젝트
 - AR Contents: 증강시킬 3D 오브젝트
