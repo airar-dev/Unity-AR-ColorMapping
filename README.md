@@ -73,7 +73,7 @@ with EasyAR
 1. 프로젝트에 EasyAR SDK를 임포트합니다.
 
 2. 씬에 'AirarManager.cs' 스크립트를 추가합니다.
-
+[easyar-sc-1]
 3. 씬에 EasyAR의 ImageTracking_Targets 프리팹을 추가합니다.
 
 4. 추가한 ImageTracking_Targets 오브젝트 최상위에 'EasyARColorMapping.cs'스크립트를 추가합니다.
@@ -156,3 +156,5 @@ sung hoon oh - oh@airar.co - email
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [product-screenshot]: http://dev.airar.co/ColorMapping/sample_0.gif
+[easyar-sc-1]: http://dev.airar.co/ColorMapping/easyar/screenshot_01.png
+[easyar-sc-2]: http://dev.airar.co/ColorMapping/easyar/screenshot_02.png
