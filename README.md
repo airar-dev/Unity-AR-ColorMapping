@@ -24,7 +24,6 @@
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
 * [Getting Started](#getting-started)
-  
   * [Installation](#installation)
 * [Usage](#usage)
 * [Roadmap](#roadmap)
@@ -39,9 +38,6 @@
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://www.youtube.com/watch?v=I-WvBQRE2dw&feature=youtu.be)
-
-
-* 
 
 
 ### Built With
@@ -72,9 +68,41 @@ MaxstAR, EasyAR, Vuforia, ARkit, ARcore 중에 적용할 엔진 임포트
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-현재 MaxstAR 엔진과 연동 가능하게 작업중이며 1차 작업이 끝나면 
+with EasyAR
 
-사용 방법 자세히 기록 
+1. 프로젝트에 EasyAR SDK를 임포트합니다.
+
+2. 씬에 'AirarManager.cs' 스크립트를 추가합니다
+  ![easyar-sc-1]
+    
+3. 씬에 EasyAR의 ImageTracking_Targets 프리팹을 추가합니다.
+
+4. 추가한 ImageTracking_Targets 오브젝트 최상위에 'EasyARColorMapping.cs'스크립트를 추가합니다.
+  ![easyar-sc-2]
+      
+- ImageTargetController: ImageTracking_Targets 오브젝트
+- AR Contents: 증강시킬 3D 오브젝트
+- Draw Obj: 컬러링한 Texture를 입힐 Material이 포함된 오브젝트
+- Trasparent Mat: 투명한 Material
+- Real Height: 마커 이미지의 실제 세로 사이즈
+- Real Width: 마커 이미지의 실제 가로 사이즈
+
+with MaxstAR
+
+1. 프로젝트에 MaxstAR SDK를 임포트합니다.
+
+2. 씬에 'AirarManager.cs' 스크립트를 추가합니다.
+  ![masxtar-sc-1]
+
+4. 추가한 ImageTrackable 오브젝트 최상위에 'MaxstARColorMapping.cs'스크립트를 추가합니다.
+  ![masxtar-sc-1]
+
+- ImageTargetController: ImageTrackable 오브젝트
+- AR Contents: 증강시킬 3D 오브젝트
+- Draw Obj: 컬러링한 Texture를 입힐 Material이 포함된 오브젝트
+- Trasparent Mat: 투명한 Material
+
+
 
 _For more examples, please refer to the [Documentation](http://airar.co.kr)_
 
@@ -82,6 +110,9 @@ _For more examples, please refer to the [Documentation](http://airar.co.kr)_
 
 <!-- ROADMAP -->
 ## Roadmap
+
+- apply Vuforia
+- apply arfoundation (arkit, arcore)
 
 See the [open issues](https://github.com/airar-dev/ColorMapping/issues) for a list of proposed features (and known issues).
 
@@ -125,4 +156,8 @@ sung hoon oh - oh@airar.co - email
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[product-screenshot]: http://dev.airar.co/ColorMapping/color.jpg
+[product-screenshot]: http://dev.airar.co/ColorMapping/sample_0.gif
+[easyar-sc-1]: http://dev.airar.co/ColorMapping/easyar/screenshot_01.png
+[easyar-sc-2]: http://dev.airar.co/ColorMapping/easyar/screenshot_02.png
+[masxtar-sc-1]: http://dev.airar.co/ColorMapping/maxstar/screenshot_03.png
+[masxtar-sc-2]: http://dev.airar.co/ColorMapping/maxstar/screenshot_04.png
