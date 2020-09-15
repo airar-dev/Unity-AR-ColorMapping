@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-#if USE_VUFORIA
-using Vuforia;
+#if USE_EASYAR
+using easyar;
 #endif
 
-public class VuforiaColorMapping : MonoBehaviour
+public class EasyARColorMapping : MonoBehaviour
 {
-#if USE_VUFORIA
-    public ImageTargetBehaviour imageTaget;
+#if USE_EASYAR
+    public ImageTargetController imageTargetController;
 #endif
 
     public GameObject arContents;
@@ -23,12 +23,16 @@ public class VuforiaColorMapping : MonoBehaviour
 
     void Start()
     {
-#if USE_VUFORIA
-        Vector2 imageTargetSize = imageTaget.GetSize();
-        float targetWidth = imageTargetSize.x;
-        float targetHeight = imageTargetSize.y;
+#if USE_EASYAR
+        imageTargetController.TargetLoad += (loadedTarget, result) =>
+        {
+            easyar.Image targetImage = ((loadedTarget as ImageTarget).images())[0];
+            float targetWidth = (float)targetImage.width();
+            float targetHeight = (float)targetImage.height();
+            float targetScale = (targetHeight / targetWidth);
 
-        cube = CreateCubeForVuforiaTarget(this.gameObject, targetWidth, targetHeight);
+            cube = CreateCubeForEasyARTarget(this.gameObject, targetScale);
+        };
 #endif
     }
 
@@ -50,17 +54,17 @@ public class VuforiaColorMapping : MonoBehaviour
     }
 
     /// <summary>
-    /// Create a full size cube on the Vuforia marker image
+    /// Create a full size cube on the EasyAR marker image
     /// </summary>
-    /// <param name="targetWidth">marker image width</param>
-    /// <param name="targetHeight">marker image height</param>
-    public GameObject CreateCubeForVuforiaTarget(GameObject parentObj, float targetWidth, float targetHeight)
+    /// <param name="targetScale">EasyAR marker image scale</param>
+    public GameObject CreateCubeForEasyARTarget(GameObject parentObj, float targetScale)
     {
         GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
         cube.GetComponent<Renderer>().material = transparentMat;
         cube.transform.SetParent(parentObj.transform);
-        cube.transform.localPosition = Vector3.zero;
-        cube.transform.localScale = new Vector3(targetWidth, 0.001f, targetHeight);
+        cube.transform.localPosition = new Vector3(0f, 0f, -0.005f);
+        cube.transform.localRotation = Quaternion.Euler(new Vector3(-90f, 0f, 0f));
+        cube.transform.localScale = new Vector3(1f, 0.01f, targetScale);
 
         return cube;
     }

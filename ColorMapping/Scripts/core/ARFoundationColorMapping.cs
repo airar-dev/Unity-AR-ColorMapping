@@ -19,6 +19,9 @@ public class ARFoundationColorMapping : MonoBehaviour
 
     private GameObject cube;
 
+    public float realWidth;
+    public float realHeight;
+
     void Start()
     {
 #if USE_ARFOUNDATION
@@ -41,7 +44,7 @@ public class ARFoundationColorMapping : MonoBehaviour
 
         Texture2D screenShotTex = ScreenShot.GetScreenShot(arContents);
 
-        AirarManager.Instance.ProcessColoredMapTexture(screenShotTex, srcValue, 1024, 768, (resultTex) =>
+        AirarManager.Instance.ProcessColoredMapTexture(screenShotTex, srcValue, realWidth, realHeight, (resultTex) =>
         {
             drawObj.GetComponent<Renderer>().material.mainTexture = resultTex;
         });
