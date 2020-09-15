@@ -18,6 +18,9 @@ public class VuforiaColorMapping : MonoBehaviour
 
     private GameObject cube;
 
+    public float realWidth;
+    public float realHeight;
+
     void Start()
     {
 #if USE_VUFORIA
@@ -40,7 +43,7 @@ public class VuforiaColorMapping : MonoBehaviour
 
         Texture2D screenShotTex = ScreenShot.GetScreenShot(arContents);
 
-        AirarManager.Instance.ProcessColoredMapTexture(screenShotTex, srcValue, 1024, 768, (resultTex) =>
+        AirarManager.Instance.ProcessColoredMapTexture(screenShotTex, srcValue, realWidth, realHeight, (resultTex) =>
         {
             drawObj.GetComponent<Renderer>().material.mainTexture = resultTex;
         });
