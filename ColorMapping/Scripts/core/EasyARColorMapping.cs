@@ -48,6 +48,7 @@ public class EasyARColorMapping : MonoBehaviour
         Texture2D screenShotTex = ScreenShot.GetScreenShot(arContents);
 
         AirarManager.Instance.ProcessColoredMapTexture(screenShotTex, srcValue, realWidth, realHeight, (resultTex) =>
+
         {
             drawObj.GetComponent<Renderer>().material.mainTexture = resultTex;
         });
