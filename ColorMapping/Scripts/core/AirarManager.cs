@@ -8,9 +8,10 @@ using System;
 
 public class AirarManager : AirarSingleton<AirarManager>
 {
+    public Material transparentMat;
+
     [DllImport("AirarColorMap")]
     private static extern void ImageProc(string imgPath, float[] src, int height, int width);
-
 
     /// <summary>
     /// 
