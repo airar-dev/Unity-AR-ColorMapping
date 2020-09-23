@@ -6,6 +6,8 @@ using UnityEngine;
 
 public static class ScreenShot
 {
+    private static string TEMP_FILE_NAME = "colorMappingTempImg.jpg";
+
     private static Rect rect;
     private static RenderTexture renderTexture;
     private static Texture2D screenShot;
@@ -38,7 +40,9 @@ public static class ScreenShot
         Texture2D tex = screenShot;
 
         byte[] texture_bytes = tex.EncodeToJPG();
-        File.WriteAllBytes(FilePathUtil.GetImageSavePath("colorMappingTempImg.jpg"), texture_bytes);
+
+        string filePath = Path.Combine(Application.persistentDataPath, TEMP_FILE_NAME);
+        File.WriteAllBytes(filePath, texture_bytes);
 
         renderTexture = null;
         screenShot = null;
