@@ -14,12 +14,11 @@ public class EasyARColorMapping : MonoBehaviour
 
     public GameObject arContents;
     public GameObject drawObj;
-    public Material transparentMat;
-
-    private GameObject cube;
 
     public int realWidth;
     public int realHeight;
+
+    private GameObject cube;
 
     void Start()
     {
@@ -40,15 +39,9 @@ public class EasyARColorMapping : MonoBehaviour
     {
         float[] srcValue = AirarManager.Instance.CalculateMarkerImageVertex(cube);
 
-        foreach (float val in srcValue)
-        {
-            Debug.Log(val);
-        }
-
         Texture2D screenShotTex = ScreenShot.GetScreenShot(arContents);
 
         AirarManager.Instance.ProcessColoredMapTexture(screenShotTex, srcValue, realWidth, realHeight, (resultTex) =>
-
         {
             drawObj.GetComponent<Renderer>().material.mainTexture = resultTex;
         });
@@ -61,7 +54,7 @@ public class EasyARColorMapping : MonoBehaviour
     public GameObject CreateCubeForEasyARTarget(GameObject parentObj, float targetScale)
     {
         GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        cube.GetComponent<Renderer>().material = transparentMat;
+        cube.GetComponent<Renderer>().material = AirarManager.Instance.transparentMat;
         cube.transform.SetParent(parentObj.transform);
         cube.transform.localPosition = new Vector3(0f, 0f, -0.005f);
         cube.transform.localRotation = Quaternion.Euler(new Vector3(-90f, 0f, 0f));

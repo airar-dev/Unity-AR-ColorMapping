@@ -15,12 +15,11 @@ public class ARFoundationColorMapping : MonoBehaviour
 
     public GameObject arContents;
     public GameObject drawObj;
-    public Material transparentMat;
-
-    private GameObject cube;
 
     public int realWidth;
     public int realHeight;
+
+    private GameObject cube;
 
     void Start()
     {
@@ -36,11 +35,6 @@ public class ARFoundationColorMapping : MonoBehaviour
     public void Play()
     {
         float[] srcValue = AirarManager.Instance.CalculateMarkerImageVertex(cube);
-
-        foreach (float val in srcValue)
-        {
-            Debug.Log(val);
-        }
 
         Texture2D screenShotTex = ScreenShot.GetScreenShot(arContents);
 
@@ -58,7 +52,7 @@ public class ARFoundationColorMapping : MonoBehaviour
     public GameObject CreateCubeForARFoundationTarget(GameObject parentObj, float targetWidth, float targetHeight)
     {
         GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        cube.GetComponent<Renderer>().material = transparentMat;
+        cube.GetComponent<Renderer>().material = AirarManager.Instance.transparentMat;
         cube.transform.SetParent(parentObj.transform);
         cube.transform.localPosition = Vector3.zero;
         cube.transform.localScale = new Vector3(targetWidth, 0.001f, targetHeight);
