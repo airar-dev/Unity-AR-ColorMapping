@@ -151,8 +151,7 @@ sung hoon oh - oh@airar.co - email
 ## Known Issue
 
 * Maxstar is not optimized. but maybe pretty good 
-* []()
-* []()
+* not support ios not yet.
 
 
 
