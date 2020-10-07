@@ -148,9 +148,9 @@ sung hoon oh - oh@airar.co - email
 
 
 <!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
+## Known Issue
 
-* []()
+* Maxstar is not optimized. but maybe pretty good 
 * []()
 * []()
 
