@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using UnityEngine;
 
+//Helps create file paths
 public static class FilePathUtil
 {
     private static string FOLDER_NAME = "AIR_AR";
