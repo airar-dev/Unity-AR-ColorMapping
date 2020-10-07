@@ -1,0 +1,2 @@
+Assets/** filter=lfs diff=lfs merge=lfs -text
+*.unitypackage filter=lfs diff=lfs merge=lfs -text
