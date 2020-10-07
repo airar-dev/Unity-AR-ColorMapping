@@ -9,7 +9,7 @@
   <h3 align="center">ColorMapping</h3>
 
   <p align="center">
-    이 프로젝트는 MaxstAR, EasyAR, Vuforia, ARkit, ARcore 에 적용가능한 AR 컬러링 라이브러리 입니다.
+    This project is an AR coloring library applicable to MaxstAR, EasyAR, Vuforia, ARkit and ARcore.
     <br />
    <a href="https://www.youtube.com/watch?v=I-WvBQRE2dw&feature=youtu.be">View Demo</a>
    
