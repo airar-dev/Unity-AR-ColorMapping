@@ -111,8 +111,12 @@ _For more examples, please refer to the [Documentation](http://airar.co.kr)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- apply Vuforia
-- apply arfoundation (arkit, arcore)
+- <del> apply Vuforia </del>
+- <del> apply arfoundation (arkit, arcore) </del> 
+- <del> easyar sample </del>
+- <del> maxstAR sample </del>
+- <del> vuforia sample </del>
+- <del> arfoundation(arkit/arcore) </del>
 
 See the [open issues](https://github.com/airar-dev/ColorMapping/issues) for a list of proposed features (and known issues).
 
