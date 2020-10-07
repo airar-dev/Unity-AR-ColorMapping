@@ -4,6 +4,7 @@ using System.IO;
 using UnityEditor;
 using UnityEngine;
 
+//Help to ScreenShot
 public static class ScreenShot
 {
     private static Rect rect;
