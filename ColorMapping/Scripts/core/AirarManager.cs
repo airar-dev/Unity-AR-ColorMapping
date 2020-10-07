@@ -22,6 +22,7 @@ public class AirarManager : AirarSingleton<AirarManager>
     /// <param name="width">target 3d model map width size</param>
     public void ProcessColoredMapTexture(Texture2D srcTexture ,float[] src,int height, int width,Action<Texture2D> callback)
     {
+
         Texture2D dstTexture = new Texture2D(width, height);
 
         //string imgPath = FilePathUtil.GetImageSavePath("airar.jpg");
