@@ -24,7 +24,7 @@
 
   <p align="center"> <br />
     This project is an easy-to-apply AR Coloring Library. <br />
-    This project can be applied to AR Engines of MaxstAR, EasyAR, Vuforia, ARkit, ARcore. <br />
+    This project can be applied to AR Engines of MaxstAR, EasyAR, Vuforia, ARFoundation (ARkit/ARcore). <br />
     To use it for business projects, you need to purchase a separate license for the AR Engine. <br /><br />
     <a href="https://www.youtube.com/watch?v=I-WvBQRE2dw&feature=youtu.be" target="_blank">View Demo</a> <br /><br />
     
@@ -48,7 +48,7 @@
   * [with MaxstAR](#with-maxstar)
   * [with EasyAR](#with-easyar)
   * [with Vuforia](#with-vuforia)
-  * [with ARCore/ARKit](#with-arcore/arkit)
+  * [with ARFoundation (ARkit/ARcore)](#with-arfoundation-(arkit/arcore))
 * [Roadmap](#roadmap)
 * [Known Issues](#known-issues)
 * [Contributing](#contributing)
@@ -81,7 +81,7 @@
 　　　![installation-1]
 
 　3.　Importing the AR Engine SDK to be used together. <br />
-　　　(You can use MaxstAR, EasyAR, Vuforia, ARkit, ARcore.) <br />
+　　　(You can use MaxstAR, EasyAR, Vuforia, ARFoundation (ARkit/ARcore)) <br />
 
 <br />
 
@@ -149,7 +149,7 @@
 
 
 ## Roadmap
-* Scheduled to upload sample project using ARCore/ARKit.
+* Scheduled to upload sample project using ARFoundation (ARkit/ARcore).
 * Coming soon to upload code for ios.
 
 <br />
@@ -181,7 +181,7 @@
 <br />
 
 ## Contact
-* oh@airar.co(sung hoon oh)
+* oh@airar.co (sung hoon oh)
 
 <br /><br />
 
