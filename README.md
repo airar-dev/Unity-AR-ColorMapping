@@ -2,10 +2,25 @@
 
 <p align="center">
   <a href="https://github.com/airar-dev/ColorMapping">
-    <img src="http://dev.airar.co/ColorMapping/logo_png.png" alt="Logo" width="80" height="80">
+    <img src="http://dev.airar.co/ColorMapping/Img/Default/logo_png.png" alt="Logo" width="80" height="80">
   </a>
 
   <h1 align="center"> ColorMapping </h1>
+  
+<div align="center">
+  
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/airar-dev/Unity-AR-ColorMapping?color=4cc51e)](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/)
+[![GitHub top language](https://img.shields.io/github/languages/top/airar-dev/Unity-AR-ColorMapping?color=1081c2)](https://github.com/airar-dev/Unity-AR-ColorMapping/search?l=c%23)
+[![GitHub license](https://img.shields.io/github/license/airar-dev/Unity-AR-ColorMapping?color=f48041)](https://opensource.org/licenses/bsd-license.php)
+[![GitHub forks](https://img.shields.io/github/forks/airar-dev/Unity-AR-ColorMapping?color=4cc51e)](https://github.com/airar-dev/Unity-AR-ColorMapping/network/members)
+[![GitHub watchers](https://img.shields.io/github/watchers/airar-dev/Unity-AR-ColorMapping?color=4cc51e)](https://github.com/airar-dev/Unity-AR-ColorMapping/watchers)
+[![GitHub Repo stars](https://img.shields.io/github/stars/airar-dev/Unity-AR-ColorMapping?color=4cc51e)](https://github.com/airar-dev/Unity-AR-ColorMapping/stargazers) <br />
+[![Unity Badge](http://img.shields.io/badge/-Unity3D_2019.3.14f1-000?logo=unity&link=https://unity.com/)](https://unity.com/)
+[![Visual Studio Badge](http://img.shields.io/badge/-Visual_Studio_2019-5C2D91?logo=visual-studio&link=https://visualstudio.microsoft.com/)](https://visualstudio.microsoft.com/)
+[![OS And Badge](http://img.shields.io/badge/-opencv_3.4.10_android_sdk-3DDC84?logo=Android&logoColor=fff&link=https://opencv.org/releases/)](https://opencv.org/releases/)
+[![OS IOS Badge](http://img.shields.io/badge/-opencv.framework-9f9f9f?logo=iOS&logoColor=fff&link=https://opencv.org/releases/)](https://opencv.org/releases/)
+
+</div>
 
   <p align="center"> <br />
     This project is an easy-to-apply AR Coloring Library. <br />
@@ -15,7 +30,7 @@
     
  <p align="center">
   <a href="https://www.youtube.com/watch?v=I-WvBQRE2dw&amp;feature=youtu.be" rel="nofollow">
-  <img  src="http://dev.airar.co/ColorMapping/video_sample.gif" alt="Video Screenshot" style="max-width:100%;">
+  <img src="http://dev.airar.co/ColorMapping/Img/Default/video_sample.gif" alt="Video Screenshot" style="max-width:100%;">
   </a>
  </p>
     
@@ -54,12 +69,19 @@
 
 
 ## Installation
-　1.　clone a repository or download it as zip.
+　1.　Clone a repository or download it as zip.
 ```
     git clone https://github.com/airar-dev/ColorMapping.git
 ```
-　2.　Importing the AR Engine SDK to be used together.<br />
-　　　(You can use MaxstAR, EasyAR, Vuforia, ARkit, ARcore.)
+　2.　Download [OpenCV](https://opencv.org/releases/). <br />
+　　　Add **libopencv_java3.so** into the Android folder and <br />
+　　　add **opencv.framework** into the iOS folder. <br />
+　　　(libopencv_java3.so location is under the path opencv-3.4.10-android-sdk\sdk\native\libs\armeabi-v7a) <br />
+   
+　　　![installation-1]
+
+　3.　Importing the AR Engine SDK to be used together. <br />
+　　　(You can use MaxstAR, EasyAR, Vuforia, ARkit, ARcore.) <br />
 
 <br />
 
@@ -166,10 +188,10 @@
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[video-screenshot]: http://dev.airar.co/ColorMapping/video_sample.gif
-[masxtar-1]: http://dev.airar.co/ColorMapping/MaxstARSampleImg_01.jpg
-[masxtar-2]: http://dev.airar.co/ColorMapping/MaxstARSampleImg_02.jpg
-[easyar-1]: http://dev.airar.co/ColorMapping/EasyARSampleImg_01.jpg
-[easyar-2]: http://dev.airar.co/ColorMapping/EasyARSampleImg_02.jpg
-[vuforia-1]: http://dev.airar.co/ColorMapping/VuforiaSampleImg_01.jpg
-[vuforia-2]: http://dev.airar.co/ColorMapping/VuforiaSampleImg_02.jpg
+[installation-1]: http://dev.airar.co/ColorMapping/Img/Default/Installation_01.jpg
+[masxtar-1]: http://dev.airar.co/ColorMapping/Img/MaxstAR/MaxstARSampleImg_01.jpg
+[masxtar-2]: http://dev.airar.co/ColorMapping/Img/MaxstAR/MaxstARSampleImg_02.jpg
+[easyar-1]: http://dev.airar.co/ColorMapping/Img/EasyAR/EasyARSampleImg_01.jpg
+[easyar-2]: http://dev.airar.co/ColorMapping/Img/EasyAR/EasyARSampleImg_02.jpg
+[vuforia-1]: http://dev.airar.co/ColorMapping/Img/Vuforia/VuforiaSampleImg_01.jpg
+[vuforia-2]: http://dev.airar.co/ColorMapping/Img/Vuforia/VuforiaSampleImg_02.jpg
