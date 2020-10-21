@@ -194,6 +194,9 @@
 
 <br />
 
+## To do 
+[ ] cafe url
+
 ## Contact
 * oh@airar.co (sung hoon oh)
 
