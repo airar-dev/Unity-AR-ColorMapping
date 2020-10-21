@@ -172,7 +172,7 @@
 ## Known issues
 
 * The coloring is not very accurate when used with the MaxstAR engine.
-* ios is not yet supported.
+* Currently ios is supported but only easyar is tested. Another sample will be uploaded later.
 
 <br />
 
