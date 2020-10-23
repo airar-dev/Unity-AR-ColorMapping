@@ -10,7 +10,12 @@ public class AirarManager : AirarSingleton<AirarManager>
 {
     public Material transparentMat;
 
+#if UNITY_ANDROID
     [DllImport("AirarColorMap")]
+#elif UNITY_IOS
+    [DllImport("__Internal")]
+#endif
+
     private static extern void ImageProc(string imgPath, float[] src, int height, int width);
 
     /// <summary>
