@@ -13,24 +13,58 @@ public class ARFoundationColorMapping : MonoBehaviour
     public ARTrackedImageManager imageManager;
 #endif
 
-    public GameObject arContents;
-    public GameObject drawObj;
+    public GameObject arPrefabs;
 
     public int realWidth;
     public int realHeight;
 
+    private GameObject arContents;
+    private GameObject drawObj;
+
     private GameObject cube;
 
+#if USE_ARFOUNDATION
     void Start()
     {
-#if USE_ARFOUNDATION
-        IReferenceImageLibrary imageLibrary = imageManager.referenceLibrary;
-        float targetWidth = imageLibrary[0].width;
-        float targetHeight = imageLibrary[0].height;
-
-        cube = CreateCubeForARFoundationTarget(this.gameObject, targetWidth, targetHeight);
-#endif
+        imageManager.trackedImagesChanged += OnTrackedImagesChanged;
     }
+
+    private void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs)
+    {
+        ARTrackedImage trackedImage = null;
+
+        for (int i = 0; i < eventArgs.added.Count; i++)
+        {
+            trackedImage = eventArgs.added[i];
+            string imgName = trackedImage.referenceImage.name;
+
+            if(imgName == "sw-12")
+            {
+                arContents = Instantiate(arPrefabs, trackedImage.transform);
+                cube = CreateCubeForARFoundationTarget(this.gameObject, trackedImage.size.x, trackedImage.size.y, trackedImage.transform);
+            }
+        }
+
+        for (int i = 0; i < eventArgs.updated.Count; i++)
+        {
+            trackedImage = eventArgs.updated[i];
+
+            if (trackedImage.trackingState == TrackingState.Tracking)
+            {
+                arContents.SetActive(true);
+            }
+            else
+            {
+                arContents.SetActive(false);
+            }
+        }
+
+        for (int i = 0; i < eventArgs.removed.Count; i++)
+        {
+            arContents.SetActive(false);
+        }
+    }
+#endif
 
     public void Play()
     {
@@ -40,6 +74,7 @@ public class ARFoundationColorMapping : MonoBehaviour
 
         AirarManager.Instance.ProcessColoredMapTexture(screenShotTex, srcValue, realWidth, realHeight, (resultTex) =>
         {
+            drawObj = GameObject.FindGameObjectWithTag("coloring");
             drawObj.GetComponent<Renderer>().material.mainTexture = resultTex;
         });
     }
@@ -49,12 +84,12 @@ public class ARFoundationColorMapping : MonoBehaviour
     /// </summary>
     /// <param name="targetWidth">marker image width</param>
     /// <param name="targetHeight">marker image height</param>
-    public GameObject CreateCubeForARFoundationTarget(GameObject parentObj, float targetWidth, float targetHeight)
+    public GameObject CreateCubeForARFoundationTarget(GameObject parentObj, float targetWidth, float targetHeight, Transform trans)
     {
         GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
         cube.GetComponent<Renderer>().material = AirarManager.Instance.transparentMat;
-        cube.transform.SetParent(parentObj.transform);
-        cube.transform.localPosition = Vector3.zero;
+        cube.transform.SetParent(trans);
+        cube.transform.localPosition = trans.localPosition;
         cube.transform.localScale = new Vector3(targetWidth, 0.001f, targetHeight);
 
         return cube;
