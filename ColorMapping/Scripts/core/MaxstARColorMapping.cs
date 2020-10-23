@@ -13,11 +13,11 @@ public class MaxstARColorMapping : MonoBehaviour
 #endif
 
     public GameObject arContents;
-    public GameObject drawObj;
 
     public int realWidth;
     public int realHeight;
 
+    private GameObject drawObj;
     private GameObject cube;
 
     void Start()
@@ -36,8 +36,9 @@ public class MaxstARColorMapping : MonoBehaviour
 
         Texture2D screenShotTex = ScreenShot.GetScreenShot(arContents);
 
-        AirarManager.Instance.ProcessColoredMapTexture(screenShotTex, srcValue, realWidth, realHeight, (resultTex) =>
+        AirarManager.Instance.ProcessColoredMapTexture(screenShotTex, srcValue, realHeight, realWidth, (resultTex) =>
         {
+            drawObj = GameObject.FindGameObjectWithTag("coloring");
             drawObj.GetComponent<Renderer>().material.mainTexture = resultTex;
         });
     }

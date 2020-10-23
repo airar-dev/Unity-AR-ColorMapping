@@ -13,11 +13,11 @@ public class VuforiaColorMapping : MonoBehaviour
 #endif
 
     public GameObject arContents;
-    public GameObject drawObj;
 
     public int realWidth;
     public int realHeight;
 
+    private GameObject drawObj;
     private GameObject cube;
 
     void Start()
@@ -39,6 +39,7 @@ public class VuforiaColorMapping : MonoBehaviour
 
         AirarManager.Instance.ProcessColoredMapTexture(screenShotTex, srcValue, realWidth, realHeight, (resultTex) =>
         {
+            drawObj = GameObject.FindGameObjectWithTag("coloring");
             drawObj.GetComponent<Renderer>().material.mainTexture = resultTex;
         });
     }
