@@ -1,163 +1,214 @@
-# ColorMapping
-<!-- PROJECT LOGO -->
 <br />
+
 <p align="center">
   <a href="https://github.com/airar-dev/ColorMapping">
-    <img src="http://dev.airar.co/ColorMapping/logo_png.png" alt="Logo" width="80" height="80">
+    <img src="http://dev.airar.co/ColorMapping/Img/Default/logo_png.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">ColorMapping</h3>
+  <h1 align="center"> ColorMapping </h1>
+  
+<div align="center">
+  
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/airar-dev/Unity-AR-ColorMapping?color=4cc51e)](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/)
+[![GitHub top language](https://img.shields.io/github/languages/top/airar-dev/Unity-AR-ColorMapping?color=1081c2)](https://github.com/airar-dev/Unity-AR-ColorMapping/search?l=c%23)
+[![GitHub License](https://img.shields.io/github/license/airar-dev/Unity-AR-ColorMapping?color=f48041)](https://opensource.org/licenses/BSD-3-Clause)
+[![GitHub Watchers](https://img.shields.io/github/watchers/airar-dev/Unity-AR-ColorMapping?color=4cc51e)](https://github.com/airar-dev/Unity-AR-ColorMapping/watchers)
+[![GitHub Repo stars](https://img.shields.io/github/stars/airar-dev/Unity-AR-ColorMapping?color=4cc51e)](https://github.com/airar-dev/Unity-AR-ColorMapping/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/airar-dev/Unity-AR-ColorMapping?color=4cc51e)](https://github.com/airar-dev/Unity-AR-ColorMapping/network/members) <br />
+[![Unity Badge](http://img.shields.io/badge/-Unity3D_2019.3.14f1-000?logo=unity&link=https://unity.com/)](https://unity.com/)
+[![Visual Studio Badge](http://img.shields.io/badge/-Visual_Studio_2019-5C2D91?logo=visual-studio&link=https://visualstudio.microsoft.com/)](https://visualstudio.microsoft.com/)
+[![OS And Badge](http://img.shields.io/badge/-opencv_3.4.10_android_sdk-3DDC84?logo=Android&logoColor=fff&link=https://opencv.org/releases/)](https://opencv.org/releases/)
+[![OS IOS Badge](http://img.shields.io/badge/-opencv.framework-9f9f9f?logo=iOS&logoColor=fff&link=https://opencv.org/releases/)](https://opencv.org/releases/)
 
-  <p align="center">
-    이 프로젝트는 MaxstAR, EasyAR, Vuforia, ARkit, ARcore 에 적용가능한 AR 컬러링 라이브러리 입니다.
-    <br />
-   <a href="https://www.youtube.com/watch?v=I-WvBQRE2dw&feature=youtu.be">View Demo</a>
-   
+</div>
+
+  <p align="center"> <br />
+    This project is an easy-to-apply AR Coloring Library for Unity. <br />
+    This project can be applied to AR Engines of MaxstAR, EasyAR, Vuforia, ARFoundation(ARkit, ARcore). <br />
+    To use it for business projects, you need to purchase a separate license for the AR Engine. <br /><br />
+    <a href="https://youtu.be/HaN_d2eDf2Q" target="_blank">View Demo</a> <br /><br />
+    
+ <p align="center">
+  <a href="https://youtu.be/HaN_d2eDf2Q" rel="nofollow">
+  <img src="http://dev.airar.co/ColorMapping/Img/Default/demo_video.gif" alt="demo video" style="max-width:100%;">
+  </a>
+ </p>
+    
   </p>
 </p>
 
+<br />
 
 
-<!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
-* [About the Project](#about-the-project)
-  * [Built With](#built-with)
-* [Getting Started](#getting-started)
-  * [Installation](#installation)
-* [Usage](#usage)
-* [Roadmap](#roadmap)
+* [Requirements](#requirements)
+* [Installation](#installation)
+* [Quick Start](#quick-start)
+  * [with MaxstAR](#with-maxstar)
+  * [with EasyAR](#with-easyar)
+  * [with Vuforia](#with-vuforia)
+  * [with ARFoundation(ARkit, ARcore)](#with-arfoundation(arkit/arcore))
+* [Release](#release)
+* [Future Release](#Future-release)
+* [Known Issues](#known-issues)
 * [Contributing](#contributing)
 * [License](#license)
 * [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
+
+<br />
 
 
-
-<!-- ABOUT THE PROJECT -->
-## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://www.youtube.com/watch?v=I-WvBQRE2dw&feature=youtu.be)
-
-
-### Built With
+## Requirements
 
 * Unity3d 2019.3.14f1
 * Visual Studio 2019
 * opencv-3.4.10-android-sdk
+* opencv.framework
+
+<br />
 
 
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-ZIP 파일 다운로드후 알맞은 곳에 압축해제 후 유니티3d로 프로젝트 열기
-
-### Installation
- 
-1. Clone the repo or just download
-```sh
-git clone https://github.com/airar-dev/ColorMapping.git
+## Installation
+　1.　Clone a repository or download it as zip.
 ```
+    git clone https://github.com/airar-dev/ColorMapping.git
+```
+　2.　Download [OpenCV](https://opencv.org/releases/). <br />
+　　　Add **libopencv_java3.so** into the Android folder and <br />
+　　　add **opencv.framework** into the iOS folder. <br />
+　　　(libopencv_java3.so location is under the path opencv-3.4.10-android-sdk\sdk\native\libs\armeabi-v7a) <br />
+   
+　　　![installation-1]
 
-2. AR 엔진 탑재
+　3.　Importing the AR Engine SDK to be used together. <br />
+　　　(You can use MaxstAR, EasyAR, Vuforia, ARFoundation(ARkit, ARcore)) <br />
 
-MaxstAR, EasyAR, Vuforia, ARkit, ARcore 중에 적용할 엔진 임포트 
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-with EasyAR
-
-1. 프로젝트에 EasyAR SDK를 임포트합니다.
-
-2. 씬에 'AirarManager.cs' 스크립트를 추가합니다
-  ![easyar-sc-1]
-    
-3. 씬에 EasyAR의 ImageTracking_Targets 프리팹을 추가합니다.
-
-4. 추가한 ImageTracking_Targets 오브젝트 최상위에 'EasyARColorMapping.cs'스크립트를 추가합니다.
-  ![easyar-sc-2]
-      
-- ImageTargetController: ImageTracking_Targets 오브젝트
-- AR Contents: 증강시킬 3D 오브젝트
-- Draw Obj: 컬러링한 Texture를 입힐 Material이 포함된 오브젝트
-- Trasparent Mat: 투명한 Material
-- Real Height: 마커 이미지의 실제 세로 사이즈
-- Real Width: 마커 이미지의 실제 가로 사이즈
-
-with MaxstAR
-
-1. 프로젝트에 MaxstAR SDK를 임포트합니다.
-
-2. 씬에 'AirarManager.cs' 스크립트를 추가합니다.
-  ![masxtar-sc-1]
-
-4. 추가한 ImageTrackable 오브젝트 최상위에 'MaxstARColorMapping.cs'스크립트를 추가합니다.
-  ![masxtar-sc-1]
-
-- ImageTargetController: ImageTrackable 오브젝트
-- AR Contents: 증강시킬 3D 오브젝트
-- Draw Obj: 컬러링한 Texture를 입힐 Material이 포함된 오브젝트
-- Trasparent Mat: 투명한 Material
+<br />
 
 
+## Quick Start
 
-_For more examples, please refer to the [Documentation](http://airar.co.kr)_
+#### with MaxstAR
+
+　1.　Create an empty Unity project.<br />
+　2.　After extracting the downloaded file, <br />
+　　　import ColorMappingMaxstARSample.unitypackage from <br />
+　　　ColorMapping-master -> Sample -> MaxstARSample folder.<br />
+　3.　Find the Allow 'unsafe' code setting (under the Other Settings category of Player Settings) and enable it.<br />
+　4.　Add 'USE_MAXSTAR' into Scripting Define Symbols(under the Other Settings category of Player Settings).<br />
+　5.　Build by selecting the MaxstARSample scene under ColorMapping -> Scenes. <br /><br />
+  ![masxtar-1]
+  MaxstARColorMapping.cs <br />
+　-　ARContents:  3D object to augment <br />
+　-　DrawObj: Object containing the material to which the colored texture is applied <br />
+　-　RealWidth: Actual horizontal size of the marker image <br />
+　-　RealHeight: Actual vertical size of the marker image <br />
+<br /><br />
+  ![masxtar-2]
+  AirarManager.cs <br />
+　-　Trasparent Mat: Transparent Material <br /><br />
 
 
+#### with EasyAR
 
-<!-- ROADMAP -->
-## Roadmap
+　1.　Create an empty Unity project.<br />
+　2.　After extracting the downloaded file, <br />
+　　　import ColorMappingEasyARSample.unitypackage from <br />
+　　　ColorMapping-master -> Sample -> EasyARSample folder.<br />
+　3.　Find the Allow 'unsafe' code setting (under the Other Settings category of Player Settings) and enable it.<br />
+　4.　Add 'USE_EASYAR' into Scripting Define Symbols(under the Other Settings category of Player Settings).<br />
+　5.　Build by selecting the EasyARSample scene under ColorMapping -> Scenes. <br /><br />
+  ![easyar-1]
+  EasyARColorMapping.cs <br />
+　-　ARContents:  3D object to augment <br />
+　-　DrawObj: Object containing the material to which the colored texture is applied <br />
+　-　RealWidth: Actual horizontal size of the marker image <br />
+　-　RealHeight: Actual vertical size of the marker image <br />
+<br /><br />
+  ![easyar-2]
+  AirarManager.cs <br />
+　-　Trasparent Mat: Transparent Material <br /><br />
 
-- apply Vuforia
-- apply arfoundation (arkit, arcore)
 
-See the [open issues](https://github.com/airar-dev/ColorMapping/issues) for a list of proposed features (and known issues).
+#### with Vuforia
+
+　1.　Create an empty Unity project.<br />
+　2.　After extracting the downloaded file, <br />
+　　　import ColorMappingEasyARSample.unitypackage from <br />
+　　　ColorMapping-master -> Sample -> VuforiaSample folder.<br />
+　3.　Find the Allow 'unsafe' code setting (under the Other Settings category of Player Settings) and enable it.<br />
+　4.　Add 'USE_VUFORIA' into Scripting Define Symbols(under the Other Settings category of Player Settings). <br />
+　5.　Build by selecting the VuforiaSample scene under ColorMapping -> Scenes. <br /><br />
+  ![vuforia-1]
+  VuforiaColorMapping.cs <br />
+　-　ARContents:  3D object to augment <br />
+　-　DrawObj: Object containing the material to which the colored texture is applied <br />
+　-　RealWidth: Actual horizontal size of the marker image <br />
+　-　RealHeight: Actual vertical size of the marker image <br />
+<br /><br />
+  ![vuforia-2]
+  AirarManager.cs <br />
+　-　Trasparent Mat: Transparent Material <br /><br />
 
 
+## Release
+| Version | New Features | Date |
+|:---:|---|:---:|
+| v1.1.0 | [add iOS Library](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/3) | 2020.10.21 |
+| v1.0.1 | [add EasyAR sample](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/2) | 2020.10.07 |
+| v1.0.0 | [Apply MaxstAR, EasyAR](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/v1.0.0) | 2020.09.09 |
 
-<!-- CONTRIBUTING -->
+<br />
+
+
+## Future Release
+* Scheduled to upload sample project using ARFoundation(ARkit, ARcore).
+* Coming soon to upload sample project for ios.
+
+<br />
+
+
+## Known issues
+
+* The coloring is not very accurate when used with the MaxstAR engine.
+* Currently ios is supported but only easyar is tested. Another sample will be uploaded later.
+
+<br />
+
+
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+* Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are greatly appreciated. <br /><br />
+　1.　Fork the Project. <br />
+　2.　Create your Feature Branch. <br />
+　3.　Commit your Changes. <br />
+　4.　Push to the Branch. <br />
+　5.　Open a Pull Request. <br />
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+<br />
 
 
-
-<!-- LICENSE -->
 ## License
+* The 3-Clause BSD License. (see the LICENSE file inside this repo)
 
-Distributed under the MIT License. See `LICENSE` for more information.
+<br />
 
+## To do 
+[ ] cafe url
 
-
-<!-- CONTACT -->
 ## Contact
-sung hoon oh - oh@airar.co - email
+* oh@airar.co (sung hoon oh)
 
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-
-* []()
-* []()
-* []()
-
-
-
+<br /><br />
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[product-screenshot]: http://dev.airar.co/ColorMapping/sample_0.gif
-[easyar-sc-1]: http://dev.airar.co/ColorMapping/easyar/screenshot_01.png
-[easyar-sc-2]: http://dev.airar.co/ColorMapping/easyar/screenshot_02.png
-[masxtar-sc-1]: http://dev.airar.co/ColorMapping/maxstar/screenshot_03.png
-[masxtar-sc-2]: http://dev.airar.co/ColorMapping/maxstar/screenshot_04.png
+[installation-1]: http://dev.airar.co/ColorMapping/Img/Default/Installation_01.jpg
+[masxtar-1]: http://dev.airar.co/ColorMapping/Img/MaxstAR/MaxstARSampleImg_01.jpg
+[masxtar-2]: http://dev.airar.co/ColorMapping/Img/MaxstAR/MaxstARSampleImg_02.jpg
+[easyar-1]: http://dev.airar.co/ColorMapping/Img/EasyAR/EasyARSampleImg_01.jpg
+[easyar-2]: http://dev.airar.co/ColorMapping/Img/EasyAR/EasyARSampleImg_02.jpg
+[vuforia-1]: http://dev.airar.co/ColorMapping/Img/Vuforia/VuforiaSampleImg_01.jpg
+[vuforia-2]: http://dev.airar.co/ColorMapping/Img/Vuforia/VuforiaSampleImg_02.jpg

@@ -1,11 +1,13 @@
 ﻿using System.IO;
 using UnityEngine;
 
+//Helps create file paths
 public static class FilePathUtil
 {
     private static string FOLDER_NAME = "AIR_AR";
+    private static string FILE_NAME = "temp.jpg";
 
-    // Get Android Internal Path
+    // Get Android Internal Path 
     public static string GetAndroidInternalFilesDir()
     {
         string[] potentialDirectories = new string[]
