@@ -48,7 +48,7 @@
   * [with MaxstAR](#with-maxstar)
   * [with EasyAR](#with-easyar)
   * [with Vuforia](#with-vuforia)
-  * [with ARFoundation(ARkit, ARcore)](#with-arfoundation(arkit/arcore))
+  * [with ARFoundation(ARkit, ARcore)](#with-arfoundationarkit-arcore)
 * [Release](#release)
 * [Future Release](#Future-release)
 * [Known Issues](#known-issues)
@@ -70,91 +70,193 @@
 
 
 ## Installation
-　1.　Clone a repository or download it as zip.
+　1. Clone a repository or download it as zip.
 ```
     git clone https://github.com/airar-dev/ColorMapping.git
 ```
-　2.　Download [OpenCV](https://opencv.org/releases/). <br />
-　　　Add **libopencv_java3.so** into the Android folder and <br />
-　　　add **opencv.framework** into the iOS folder. <br />
-　　　(libopencv_java3.so location is under the path opencv-3.4.10-android-sdk\sdk\native\libs\armeabi-v7a) <br />
-   
-　　　![installation-1]
-
-　3.　Importing the AR Engine SDK to be used together. <br />
-　　　(You can use MaxstAR, EasyAR, Vuforia, ARFoundation(ARkit, ARcore)) <br />
+　2. Importing the AR Engine SDK to be used together. <br />
+　　(You can use MaxstAR, EasyAR, Vuforia, ARFoundation(ARkit, ARcore)) <br />
 
 <br />
 
 
 ## Quick Start
 
-#### with MaxstAR
+### with MaxstAR
 
-　1.　Create an empty Unity project.<br />
-　2.　After extracting the downloaded file, <br />
-　　　import ColorMappingMaxstARSample.unitypackage from <br />
-　　　ColorMapping-master -> Sample -> MaxstARSample folder.<br />
-　3.　Find the Allow 'unsafe' code setting (under the Other Settings category of Player Settings) and enable it.<br />
-　4.　Add 'USE_MAXSTAR' into Scripting Define Symbols(under the Other Settings category of Player Settings).<br />
-　5.　Build by selecting the MaxstARSample scene under ColorMapping -> Scenes. <br /><br />
-  ![masxtar-1]
-  MaxstARColorMapping.cs <br />
-　-　ARContents:  3D object to augment <br />
-　-　DrawObj: Object containing the material to which the colored texture is applied <br />
-　-　RealWidth: Actual horizontal size of the marker image <br />
-　-　RealHeight: Actual vertical size of the marker image <br />
-<br /><br />
-  ![masxtar-2]
-  AirarManager.cs <br />
-　-　Trasparent Mat: Transparent Material <br /><br />
+　**1. Create Project** <br />
+ 　-　Create an empty Unity3D project. <br /> <br />
+  
+　**2. Import Package** <br />
+　-　After extracting the downloaded file, <br />
+　　 import ColorMappingEasyARSample.unitypackage from<br />
+　　 ColorMapping-master -> Sample -> android folder.<br /> <br />
+ 
+　**3. Player Settings for Android**
+<table>
+<tr><td>Allow 'unsafe' code</td><td>Check the Allow 'unsafe' code</td></tr>
+<tr><td>Scripting Backend</td><td>Select IL2CPP</td></tr>
+<tr><td>Target Architectures</td><td>Check Arm64 architecture(uncheck ARM7)</td></tr>
+<tr><td>Scripting Define Symbols</td><td>Add ‘USE_MAXSTAR’ into Scripting Define Symbols</td></tr>
+</table>
+<br />
+
+　**4. Setting for 3D Contents**
+<table>
+<tr> <td>‘coloring’ tag　　　　　</td><td>Set ‘coloring’ tag for Object containing the material<br/> to which the colored texture is applied</td></tr>
+</table>
+<br />
+
+　**5. Initialize MaxstAR** <br />
+　-　For MaxstAR to work, a license key is required.<br /><br />
+ 
+　**6. MaxstARColorMapping.cs** <br /><br />
+![masxtar-1]
+<table>
+<tr><td>trackableBehaviour　　</td><td>MaxstAR ImageTrackableBehaviour</td></tr>
+<tr><td>ARContents</td><td>3D object to augment</td></tr>
+<tr><td>RealWidth</td><td>Actual horizontal size of the marker image</td></tr>
+<tr><td>RealHeight</td><td>Actual vertical size of the marker image</td></tr>
+</table>
+<br />
+ 
+ 　**7. Build** <br />
+　-　Build by selecting the MaxstARSample scene under ColorMapping -> Scenes.<br /><br /><br />
+ 
+ 
+### with EasyAR
+
+　**1. Create Project** <br />
+ 　-　Create an empty Unity3D project. <br /> <br />
+  
+　**2. Import Package** <br />
+　-　After extracting the downloaded file, <br />
+　　 import ColorMappingEasyARSample.unitypackage from<br />
+　　 ColorMapping-master -> Sample -> android folder.<br /> <br />
+ 
+　**3. Player Settings for Android**
+<table>
+<tr><td>Allow 'unsafe' code</td><td>Check the Allow 'unsafe' code</td></tr>
+<tr><td>Graphics APIs</td><td>Remove Vulkan from the Graphic API list</td></tr>
+<tr><td>Scripting Backend</td><td>Select IL2CPP</td></tr>
+<tr><td>Target Architectures</td><td>Check Arm64 architecture(uncheck ARM7)</td></tr>
+<tr><td>Scripting Define Symbols</td><td>Add 'USE_EASYAR' into Scripting Define Symbols</td></tr>
+</table>
+<br />
+
+　**4. Setting for 3D Contents**
+<table>
+<tr> <td>‘coloring’ tag　　　　　</td><td>Set ‘coloring’ tag for Object containing the material<br/> to which the colored texture is applied</td></tr>
+</table>
+<br />
+
+　**5. Initialize EasyAR** <br />
+　-　For EasyAR to work, a license key is required.<br /><br />
+ 
+　**6. EasyARColorMapping.cs** <br /><br />
+![easyar-1]
+<table>
+<tr><td>ImageTargetController　</td><td>EasyAR ImageTargetController</td></tr>
+<tr><td>ARContents</td><td>3D object to augment</td></tr>
+<tr><td>RealWidth</td><td>Actual horizontal size of the marker image</td></tr>
+<tr><td>RealHeight</td><td>Actual vertical size of the marker image</td></tr>
+</table>
+<br />
+ 
+ 　**7. Build** <br />
+　-　Build by selecting the EasyARSample scene under ColorMapping -> Scenes.<br /><br /><br />
+ 
+
+### with Vuforia
+
+　**1. Create Project** <br />
+ 　-　Create an empty Unity3D project. <br /> <br />
+  
+　**2. Import Package** <br />
+　-　After extracting the downloaded file, <br />
+　　 import ColorMappingVuforiaSample.unitypackage from ColorMapping-master -> Sample -> android folder.<br /><br />
+ 
+　**3. Player Settings for Android**
+<table>
+<tr><td>Allow 'unsafe' code</td><td>Check the Allow 'unsafe' code</td></tr>
+<tr><td>Scripting Backend</td><td>Select IL2CPP</td></tr>
+<tr><td>Target Architectures</td><td>Check Arm64 architecture(uncheck ARM7)</td></tr>
+<tr><td>Scripting Define Symbols</td><td>Add 'USE_VUFORIA' into Scripting Define Symbols</td></tr>
+</table>
+<br />
+
+　**4. Setting for 3D Contents**
+<table>
+<tr> <td>‘coloring’ tag　　　　　</td><td>Set ‘coloring’ tag for Object containing the material<br/> to which the colored texture is applied</td></tr>
+</table>
+<br />
+
+　**5. Initialize Vuforia** <br />
+　-　For Vuforia to work, a license key is required.<br /><br />
+ 
+　**6. VuforiaColorMapping.cs** <br /><br />
+![vuforia-1]
+<table>
+<tr><td>ImageTaget　　　　　　</td><td>Vuforia ImageTargetBehaviour</td></tr>
+<tr><td>ARContents</td><td>3D object to augment</td></tr>
+<tr><td>RealWidth</td><td>Actual horizontal size of the marker image</td></tr>
+<tr><td>RealHeight</td><td>Actual vertical size of the marker image</td></tr>
+</table>
+<br />
+ 
+ 　**7. Build** <br />
+　-　Build by selecting the VuforiaSample scene under ColorMapping -> Scenes.<br /><br /><br />
 
 
-#### with EasyAR
+### with ARFoundation(ARkit, ARcore)
 
-　1.　Create an empty Unity project.<br />
-　2.　After extracting the downloaded file, <br />
-　　　import ColorMappingEasyARSample.unitypackage from <br />
-　　　ColorMapping-master -> Sample -> EasyARSample folder.<br />
-　3.　Find the Allow 'unsafe' code setting (under the Other Settings category of Player Settings) and enable it.<br />
-　4.　Add 'USE_EASYAR' into Scripting Define Symbols(under the Other Settings category of Player Settings).<br />
-　5.　Build by selecting the EasyARSample scene under ColorMapping -> Scenes. <br /><br />
-  ![easyar-1]
-  EasyARColorMapping.cs <br />
-　-　ARContents:  3D object to augment <br />
-　-　DrawObj: Object containing the material to which the colored texture is applied <br />
-　-　RealWidth: Actual horizontal size of the marker image <br />
-　-　RealHeight: Actual vertical size of the marker image <br />
-<br /><br />
-  ![easyar-2]
-  AirarManager.cs <br />
-　-　Trasparent Mat: Transparent Material <br /><br />
+　**1. Create Project** <br />
+ 　-　Create an empty Unity3D project. <br /> <br />
+  
+　**2. Import Package** <br />
+　-　After extracting the downloaded file, <br />
+　　 import ColorMappingARFoundationSample.unitypackage from<br />
+　　 ColorMapping-master -> Sample -> android folder.<br /><br />
+ 
+　**3. Player Settings for Android**
+<table>
+<tr><td>Allow 'unsafe' code</td><td>Check the Allow 'unsafe' code</td></tr>
+<tr><td>Graphics APIs</td><td>Remove Vulkan from the Graphic API list</td></tr>
+<tr><td>Scripting Backend</td><td>Select IL2CPP</td></tr>
+<tr><td>Target Architectures</td><td>Check Arm64 architecture(uncheck ARM7)</td></tr>
+<tr><td>Scripting Define Symbols</td><td>Add 'USE_ARFOUNDATION' into Scripting Define Symbols</td></tr>
+<tr><td>Minimum API Level</td><td>Android 7.0(API Level 24)+</td></tr>
+</table>
+<br />
 
+　**4. Setting for 3D Contents**
+<table>
+<tr> <td>‘coloring’ tag　　　　　</td><td>Set ‘coloring’ tag for Object containing the material<br/> to which the colored texture is applied</td></tr>
+</table>
+<br />
 
-#### with Vuforia
-
-　1.　Create an empty Unity project.<br />
-　2.　After extracting the downloaded file, <br />
-　　　import ColorMappingEasyARSample.unitypackage from <br />
-　　　ColorMapping-master -> Sample -> VuforiaSample folder.<br />
-　3.　Find the Allow 'unsafe' code setting (under the Other Settings category of Player Settings) and enable it.<br />
-　4.　Add 'USE_VUFORIA' into Scripting Define Symbols(under the Other Settings category of Player Settings). <br />
-　5.　Build by selecting the VuforiaSample scene under ColorMapping -> Scenes. <br /><br />
-  ![vuforia-1]
-  VuforiaColorMapping.cs <br />
-　-　ARContents:  3D object to augment <br />
-　-　DrawObj: Object containing the material to which the colored texture is applied <br />
-　-　RealWidth: Actual horizontal size of the marker image <br />
-　-　RealHeight: Actual vertical size of the marker image <br />
-<br /><br />
-  ![vuforia-2]
-  AirarManager.cs <br />
-　-　Trasparent Mat: Transparent Material <br /><br />
-
+　**5. Initialize ARFoundation** <br />
+　-　Importing the ARFoundation, ARCore, ARKit Unity Package.<br /><br />
+ 
+　**6. ARFoundationColorMapping.cs** <br /><br />
+![arfoundation-1]
+<table>
+<tr><td>ImageManager　　　　</td><td>ARTrackedImageManager</td></tr>
+<tr><td>ARContents</td><td>3D object to augment</td></tr>
+<tr><td>RealWidth</td><td>Actual horizontal size of the marker image</td></tr>
+<tr><td>RealHeight</td><td>Actual vertical size of the marker image</td></tr>
+</table>
+<br />
+ 
+ 　**7. Build** <br />
+　-　Build by selecting the ARFoundationSample scene under ColorMapping -> Scenes.<br /><br /><br />
+ 
 
 ## Release
 | Version | New Features | Date |
 |:---:|---|:---:|
+| 　v1.2.1　 | [modify sample unitypackages for android](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/1.2.1) | 　2020.10.23　 |
+| v1.2.0 | [update android sample](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/v1.2.0) | 2020.10.23 |
 | v1.1.0 | [add iOS Library](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/3) | 2020.10.21 |
 | v1.0.1 | [add EasyAR sample](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/2) | 2020.10.07 |
 | v1.0.0 | [Apply MaxstAR, EasyAR](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/v1.0.0) | 2020.09.09 |
@@ -163,7 +265,6 @@
 
 
 ## Future Release
-* Scheduled to upload sample project using ARFoundation(ARkit, ARcore).
 * Coming soon to upload sample project for ios.
 
 <br />
@@ -172,7 +273,6 @@
 ## Known issues
 
 * The coloring is not very accurate when used with the MaxstAR engine.
-* Currently ios is supported but only easyar is tested. Another sample will be uploaded later.
 
 <br />
 
@@ -194,9 +294,6 @@
 
 <br />
 
-## To do 
-[ ] cafe url
-
 ## Contact
 * oh@airar.co (sung hoon oh)
 
@@ -204,11 +301,8 @@
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
+[masxtar-1]: http://dev.airar.co/ColorMapping/Img/MaxstARSampleImg_01.jpg
+[easyar-1]: http://dev.airar.co/ColorMapping/Img/EasyARSampleImg_01.jpg
+[vuforia-1]: http://dev.airar.co/ColorMapping/Img/VuforiaSampleImg_01.jpg
+[arfoundation-1]: http://dev.airar.co/ColorMapping/Img/ARFoundationSampleImg_01.jpg
 
-[installation-1]: http://dev.airar.co/ColorMapping/Img/Default/Installation_01.jpg
-[masxtar-1]: http://dev.airar.co/ColorMapping/Img/MaxstAR/MaxstARSampleImg_01.jpg
-[masxtar-2]: http://dev.airar.co/ColorMapping/Img/MaxstAR/MaxstARSampleImg_02.jpg
-[easyar-1]: http://dev.airar.co/ColorMapping/Img/EasyAR/EasyARSampleImg_01.jpg
-[easyar-2]: http://dev.airar.co/ColorMapping/Img/EasyAR/EasyARSampleImg_02.jpg
-[vuforia-1]: http://dev.airar.co/ColorMapping/Img/Vuforia/VuforiaSampleImg_01.jpg
-[vuforia-2]: http://dev.airar.co/ColorMapping/Img/Vuforia/VuforiaSampleImg_02.jpg
