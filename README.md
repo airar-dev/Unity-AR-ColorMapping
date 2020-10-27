@@ -86,13 +86,20 @@
 
 　**1. Create Project** <br />
  　-　Create an empty Unity3D project. <br /> <br />
+
+　**2. Import [MaxstAR](https://developer.maxst.com/MD/downloadsdk)** <br />
+ 　-　Import MaxstAR SDK(5.0.2v). <br /> <br />
   
-　**2. Import Package** <br />
+　**3. Import Sample Package** <br />
 　-　After extracting the downloaded file, <br />
-　　 import ColorMappingEasyARSample.unitypackage from<br />
-　　 ColorMapping-master -> Sample -> android folder.<br /> <br />
+　　 import ColorMappingWithMaxstARSample.unitypackage from <br />
+　　 ColorMapping-master -> Sample folder.<br /> <br />
+
+　**4. Import Native Library** <br />
+　-　Import ‘libAirarColorMap.so, libopencv_java3.so’ file for Android. <br />
+　-　Import ‘libAirarColorMap.a, opencv2.framework’ file for iOS. <br /> <br />
  
-　**3. Player Settings for Android**
+　**5. Player Settings for Android**
 <table>
 <tr><td>Allow 'unsafe' code</td><td>Check the Allow 'unsafe' code</td></tr>
 <tr><td>Scripting Backend</td><td>Select IL2CPP</td></tr>
@@ -101,16 +108,22 @@
 </table>
 <br />
 
-　**4. Setting for 3D Contents**
+　**6. Player Settings for iOS**
 <table>
-<tr> <td>‘coloring’ tag　　　　　</td><td>Set ‘coloring’ tag for Object containing the material<br/> to which the colored texture is applied</td></tr>
+<tr><td>Allow 'unsafe' code</td><td>Check the Allow 'unsafe' code</td></tr>
+<tr><td>Scripting Backend</td><td>Select IL2CPP</td></tr>
+<tr><td>Target Architectures</td><td>Check Arm64 architecture(uncheck ARM7)</td></tr>
+<tr><td>Scripting Define Symbols</td><td>Add ‘USE_MAXSTAR’ into Scripting Define Symbols</td></tr>
 </table>
 <br />
 
-　**5. Initialize MaxstAR** <br />
-　-　For MaxstAR to work, a license key is required.<br /><br />
- 
-　**6. MaxstARColorMapping.cs** <br /><br />
+　**7. Setting for 3D Contents**
+<table>
+<tr> <td>‘coloring’ tag　　　　　</td><td>Set ‘coloring’ tag for Object containing the material <br/> to which the colored texture is applied</td></tr>
+</table>
+<br />
+
+　**8. MaxstARColorMapping.cs** <br /><br />
 ![masxtar-1]
 <table>
 <tr><td>trackableBehaviour　　</td><td>MaxstAR ImageTrackableBehaviour</td></tr>
@@ -120,7 +133,7 @@
 </table>
 <br />
  
- 　**7. Build** <br />
+ 　**9. Build** <br />
 　-　Build by selecting the MaxstARSample scene under ColorMapping -> Scenes.<br /><br /><br />
  
  
@@ -129,12 +142,20 @@
 　**1. Create Project** <br />
  　-　Create an empty Unity3D project. <br /> <br />
   
-　**2. Import Package** <br />
-　-　After extracting the downloaded file, <br />
-　　 import ColorMappingEasyARSample.unitypackage from<br />
-　　 ColorMapping-master -> Sample -> android folder.<br /> <br />
+　**2. Initialize [EasyAR](https://www.easyar.com/view/download.html)** <br />
+　-　EasyAR 3.1.0 Version required. <br />
+　-　For EasyAR to work, a license key is required. <br /> <br />
  
-　**3. Player Settings for Android**
+　**3. Import Sample Package** <br />
+　-　After extracting the downloaded file, <br />
+　　 import ColorMappingWithEasyARSample.unitypackage from<br />
+　　 ColorMapping-master -> Sample folder.<br /> <br />
+ 
+　**4. Import Native Library** <br />
+　-　Import ‘libAirarColorMap.so, libopencv_java3.so’ file for Android. <br />
+　-　Import ‘libAirarColorMap.a, opencv2.framework’ file for iOS. <br /> <br /> 
+ 
+　**5. Player Settings for Android**
 <table>
 <tr><td>Allow 'unsafe' code</td><td>Check the Allow 'unsafe' code</td></tr>
 <tr><td>Graphics APIs</td><td>Remove Vulkan from the Graphic API list</td></tr>
@@ -144,16 +165,23 @@
 </table>
 <br />
 
-　**4. Setting for 3D Contents**
+　**6. Player Settings for iOS**
 <table>
-<tr> <td>‘coloring’ tag　　　　　</td><td>Set ‘coloring’ tag for Object containing the material<br/> to which the colored texture is applied</td></tr>
+<tr><td>Allow 'unsafe' code</td><td>Check the Allow 'unsafe' code</td></tr>
+<tr><td>Graphics APIs</td><td>Remove Metal from the Graphic API list</td></tr>
+<tr><td>Scripting Backend</td><td>Select IL2CPP</td></tr>
+<tr><td>Architecture</td><td>Check Arm64 architecture(uncheck ARM7)</td></tr>
+<tr><td>Scripting Define Symbols</td><td>Add 'USE_EASYAR' into Scripting Define Symbols</td></tr>
 </table>
 <br />
 
-　**5. Initialize EasyAR** <br />
-　-　For EasyAR to work, a license key is required.<br /><br />
- 
-　**6. EasyARColorMapping.cs** <br /><br />
+　**7. Setting for 3D Contents**
+<table>
+<tr> <td>‘coloring’ tag　　　　　</td><td>Set ‘coloring’ tag for Object containing the material <br/> to which the colored texture is applied</td></tr>
+</table>
+<br />
+
+　**8. EasyARColorMapping.cs** <br /><br />
 ![easyar-1]
 <table>
 <tr><td>ImageTargetController　</td><td>EasyAR ImageTargetController</td></tr>
@@ -163,7 +191,7 @@
 </table>
 <br />
  
- 　**7. Build** <br />
+ 　**9. Build** <br />
 　-　Build by selecting the EasyARSample scene under ColorMapping -> Scenes.<br /><br /><br />
  
 
@@ -172,11 +200,19 @@
 　**1. Create Project** <br />
  　-　Create an empty Unity3D project. <br /> <br />
   
-　**2. Import Package** <br />
+　**2. Import Vuforia Unity Package** <br />
+ 　-　Importing the Vuforia Engine AR Unity Package(9.5.4v +). <br /> <br />
+
+　**3. Import Sample Package** <br />
 　-　After extracting the downloaded file, <br />
-　　 import ColorMappingVuforiaSample.unitypackage from ColorMapping-master -> Sample -> android folder.<br /><br />
+　　 import ColorMappingWithVuforiaSample.unitypackage from <br />
+　　 ColorMapping-master -> Sample folder.<br /><br />
  
-　**3. Player Settings for Android**
+　**4. Import Native Library** <br />
+ 　-　Import ‘libAirarColorMap.so, libopencv_java3.so’ file for Android. <br />
+ 　-　Import ‘libAirarColorMap.a, opencv2.framework’ file for iOS. <br /> <br />
+ 
+　**5. Player Settings for Android**
 <table>
 <tr><td>Allow 'unsafe' code</td><td>Check the Allow 'unsafe' code</td></tr>
 <tr><td>Scripting Backend</td><td>Select IL2CPP</td></tr>
@@ -185,16 +221,22 @@
 </table>
 <br />
 
-　**4. Setting for 3D Contents**
+　**6. Player Settings for iOS**
 <table>
-<tr> <td>‘coloring’ tag　　　　　</td><td>Set ‘coloring’ tag for Object containing the material<br/> to which the colored texture is applied</td></tr>
+<tr><td>Allow 'unsafe' code</td><td>Check the Allow 'unsafe' code</td></tr>
+<tr><td>Scripting Backend</td><td>Select IL2CPP</td></tr>
+<tr><td>Target Architectures</td><td>Check Arm64 architecture(uncheck ARM7)</td></tr>
+<tr><td>Scripting Define Symbols</td><td>Add 'USE_VUFORIA' into Scripting Define Symbols</td></tr>
 </table>
 <br />
 
-　**5. Initialize Vuforia** <br />
-　-　For Vuforia to work, a license key is required.<br /><br />
- 
-　**6. VuforiaColorMapping.cs** <br /><br />
+　**7. Setting for 3D Contents**
+<table>
+<tr> <td>‘coloring’ tag　　　　　</td><td>Set ‘coloring’ tag for Object containing the material <br/> to which the colored texture is applied</td></tr>
+</table>
+<br />
+
+　**8. VuforiaColorMapping.cs** <br /><br />
 ![vuforia-1]
 <table>
 <tr><td>ImageTaget　　　　　　</td><td>Vuforia ImageTargetBehaviour</td></tr>
@@ -204,7 +246,7 @@
 </table>
 <br />
  
- 　**7. Build** <br />
+ 　**9. Build** <br />
 　-　Build by selecting the VuforiaSample scene under ColorMapping -> Scenes.<br /><br /><br />
 
 
@@ -213,15 +255,22 @@
 　**1. Create Project** <br />
  　-　Create an empty Unity3D project. <br /> <br />
   
-　**2. Import Package** <br />
+　**2. Import ARFoundation Unity Package** <br />
+　-　Importing the ARFoundation(2.1.8v), <br />
+　　 ARCore(for Android)(2.1.11v), ARKit(for iOS)(2.1.9v) Unity Package. <br /> <br />
+  
+　**3. Import Sample Package** <br />
 　-　After extracting the downloaded file, <br />
-　　 import ColorMappingARFoundationSample.unitypackage from<br />
-　　 ColorMapping-master -> Sample -> android folder.<br /><br />
+　　 import ColorMappingWithARFoundationSample.unitypackage from <br />
+　　 ColorMapping-master -> Sample folder.<br /><br />
+  
+　**4. Import Native Library** <br />
+　-　Import ‘libAirarColorMap.so, libopencv_java3.so’ file for Android. <br />
+　-　Import ‘libAirarColorMap.a, opencv2.framework’ file for iOS. <br /><br />
  
-　**3. Player Settings for Android**
+　**5. Player Settings for Android**
 <table>
 <tr><td>Allow 'unsafe' code</td><td>Check the Allow 'unsafe' code</td></tr>
-<tr><td>Graphics APIs</td><td>Remove Vulkan from the Graphic API list</td></tr>
 <tr><td>Scripting Backend</td><td>Select IL2CPP</td></tr>
 <tr><td>Target Architectures</td><td>Check Arm64 architecture(uncheck ARM7)</td></tr>
 <tr><td>Scripting Define Symbols</td><td>Add 'USE_ARFOUNDATION' into Scripting Define Symbols</td></tr>
@@ -229,16 +278,23 @@
 </table>
 <br />
 
-　**4. Setting for 3D Contents**
+　**6. Player Settings for iOS**
 <table>
-<tr> <td>‘coloring’ tag　　　　　</td><td>Set ‘coloring’ tag for Object containing the material<br/> to which the colored texture is applied</td></tr>
+<tr><td>Allow 'unsafe' code</td><td>Check the Allow 'unsafe' code</td></tr>
+<tr><td>Scripting Backend</td><td>Select IL2CPP</td></tr>
+<tr><td>Architecture</td><td>Check Arm64 architecture(uncheck ARM7)</td></tr>
+<tr><td>Scripting Define Symbols</td><td>Add 'USE_ARFOUNDATION' into Scripting Define Symbols</td></tr>
+<tr><td>Target minimum iOS Version</td><td>11.0+</td></tr>
 </table>
 <br />
 
-　**5. Initialize ARFoundation** <br />
-　-　Importing the ARFoundation, ARCore, ARKit Unity Package.<br /><br />
- 
-　**6. ARFoundationColorMapping.cs** <br /><br />
+　**7. Setting for 3D Contents**
+<table>
+<tr> <td>‘coloring’ tag　　　　　</td><td>Set ‘coloring’ tag for Object containing the material <br/> to which the colored texture is applied</td></tr>
+</table>
+<br />
+
+　**8. ARFoundationColorMapping.cs** <br /><br />
 ![arfoundation-1]
 <table>
 <tr><td>ImageManager　　　　</td><td>ARTrackedImageManager</td></tr>
@@ -255,6 +311,7 @@
 ## Release
 | Version | New Features | Date |
 |:---:|---|:---:|
+| 　v1.3.1　 | [update all sample for Android/iOS](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/1.3.0) | 　2020.10.27　 |
 | 　v1.2.1　 | [modify sample unitypackages for android](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/1.2.1) | 　2020.10.23　 |
 | v1.2.0 | [update android sample](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/v1.2.0) | 2020.10.23 |
 | v1.1.0 | [add iOS Library](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/3) | 2020.10.21 |
@@ -265,7 +322,7 @@
 
 
 ## Future Release
-* Coming soon to upload sample project for ios.
+* The accuracy will be improved.
 
 <br />
 
