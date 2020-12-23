@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/airar-dev/ColorMapping">
-    <img src="http://dev.airar.co/ColorMapping/Img/Default/logo_png.png" alt="Logo" width="80" height="80">
+    <img src="http://airar.co.kr/ColorMapping/Img/Default/logo_png.png" alt="Logo" width="80" height="80">
   </a>
 
   <h1 align="center"> ColorMapping </h1>
@@ -30,7 +30,7 @@
     
  <p align="center">
   <a href="https://youtu.be/HaN_d2eDf2Q" rel="nofollow">
-  <img src="http://dev.airar.co/ColorMapping/Img/Default/demo_video.gif" alt="demo video" style="max-width:100%;">
+  <img src="http://airar.co.kr/ColorMapping/Img/Default/demo_video.gif" alt="demo video" style="max-width:100%;">
   </a>
  </p>
     
