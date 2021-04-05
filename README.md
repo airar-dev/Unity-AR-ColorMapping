@@ -64,7 +64,7 @@
 * Unity3d 2019.3.14f1
 * Visual Studio 2019
 * opencv-3.4.10-android-sdk
-* opencv.framework
+* opencv.framework(*3.4.11 version)
 
 <br />
 
