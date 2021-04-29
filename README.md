@@ -5,7 +5,7 @@
     <img src="http://airar.co.kr/ColorMapping/Img/Default/logo_png.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h1 align="center"> <u>ColorMapping</u> </h1>
+  <h1 align="center"> ColorMapping </h1>
   
 <div align="center">
   
