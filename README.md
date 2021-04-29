@@ -51,6 +51,7 @@
   * [with ARFoundation(ARkit, ARcore)](#with-arfoundationarkit-arcore)
 * [Release](#release)
 * [Future Release](#Future-release)
+* [Trouble Shooting](#Trouble-shooting)
 * [Known Issues](#known-issues)
 * [Contributing](#contributing)
 * [License](#license)
@@ -325,6 +326,26 @@
 * The accuracy will be improved.
 
 <br />
+
+
+## Trouble Shooting
+* If an error such as "Undefined symbols for architecture arm64" occurs.
+<br />
+example:
+
+```
+ Undefined symbols for architecture arm64:
+ "cv::getPerspectiveTransform(cv::Point_<float> const*, cv::Point_<float> const*)", referenced from:
+ _ImageProc in libAirarColorMap.a(AirarColorMap.o)
+ (maybe you meant: cv::getPerspectiveTransform(cv::Point_<float> const*, cv::Point_<float> const*, int))
+ ld: symbol(s) not found for architecture arm64
+ clang: error: linker command failed with exit code 1 (use -v to see invocation) 
+```
+  <br />
+　　　solutions: <br />
+　　　Be sure to use ***version 3.4.11 of the opencv framework***.
+  
+<br /><br />
 
 
 ## Known issues
