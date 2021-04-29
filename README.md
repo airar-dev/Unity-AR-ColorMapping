@@ -342,7 +342,6 @@
  ld: symbol(s) not found for architecture arm64
  clang: error: linker command failed with exit code 1 (use -v to see invocation) 
 ```
-
   <br />
 　　solutions: <br />
 　　Be sure to use ***version 3.4.11 of the opencv framework***.
