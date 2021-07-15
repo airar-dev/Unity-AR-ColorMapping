@@ -98,6 +98,7 @@
 
 　**4. Import Native Library** <br />
 　-　Import ‘libAirarColorMap.so, libopencv_java3.so’ file for Android. <br />
+　   (Set the CPU to ARM64 in the platform settings of the libAirarColorMap.so, libopencv_java3.so files.)
 　-　Import ‘libAirarColorMap.a, opencv2.framework’ file for iOS. <br /> <br />
  
 　**5. Player Settings for Android**
@@ -154,6 +155,7 @@
  
 　**4. Import Native Library** <br />
 　-　Import ‘libAirarColorMap.so, libopencv_java3.so’ file for Android. <br />
+　   (Set the CPU to ARM64 in the platform settings of the libAirarColorMap.so, libopencv_java3.so files.)
 　-　Import ‘libAirarColorMap.a, opencv2.framework’ file for iOS. <br /> <br /> 
  
 　**5. Player Settings for Android**
@@ -211,6 +213,7 @@
  
 　**4. Import Native Library** <br />
  　-　Import ‘libAirarColorMap.so, libopencv_java3.so’ file for Android. <br />
+ 　   (Set the CPU to ARM64 in the platform settings of the libAirarColorMap.so, libopencv_java3.so files.)
  　-　Import ‘libAirarColorMap.a, opencv2.framework’ file for iOS. <br /> <br />
  
 　**5. Player Settings for Android**
@@ -267,6 +270,7 @@
   
 　**4. Import Native Library** <br />
 　-　Import ‘libAirarColorMap.so, libopencv_java3.so’ file for Android. <br />
+　   (Set the CPU to ARM64 in the platform settings of the libAirarColorMap.so, libopencv_java3.so files.)
 　-　Import ‘libAirarColorMap.a, opencv2.framework’ file for iOS. <br /><br />
  
 　**5. Player Settings for Android**
