@@ -72,6 +72,14 @@
 * opencv.framework(*3.4.11 version)<br /><br />
  
 * As of August 3, 2021, the latest version of Unity and the latest version of each AR engine have been tested.
+  * Unity3d 2021.1.6f1
+  * MaxstAR 5.0.5v
+  * EasyAR 4.3.0v
+  * Vuforia Engine AR Unity Package 10.0v
+  * ARFoundation 4.1.7v
+
+<br />
+
 
 ## Installation
 　1. Clone a repository or download it as zip.
