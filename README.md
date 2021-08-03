@@ -63,6 +63,10 @@
 ## Requirements
 
 * Unity3d 2019.3.14f1
+* MaxstAR 5.0.2v
+* EasyAR 3.1.0v
+* Vuforia Engine AR Unity Package 9.5.4v
+* ARFoundation 2.1.8v
 * Visual Studio 2019
 * opencv-3.4.10-android-sdk
 * opencv.framework(*3.4.11 version)
