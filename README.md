@@ -69,7 +69,7 @@
 * ARFoundation 2.1.8v
 * Visual Studio 2019
 * opencv-3.4.10-android-sdk
-* opencv.framework(*3.4.11 version)
+* opencv.framework(*3.4.11 version)<br />
  
 * As of August 3, 2021, the latest version of Unity and the latest version of each AR engine have been tested.
 
