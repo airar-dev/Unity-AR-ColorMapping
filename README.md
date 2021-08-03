@@ -62,7 +62,7 @@
 
 ## Requirements
 
-* Unity3d 2019.3.14f1
+* Unity3D 2019.3.14f1
 * MaxstAR 5.0.2v
 * EasyAR 3.1.0v
 * Vuforia Engine AR Unity Package 9.5.4v
@@ -71,6 +71,12 @@
 * opencv-3.4.10-android-sdk
 * opencv.framework(*3.4.11 version)
 
+* As of August 3, 2021, the latest version of Unity3D and the latest version of each AR engine have been tested
+- Unity3D 2021.1.6f1
+- MaxstAR 5.0.5v
+- EasyAR 4.3.0v
+- Vuforia Engine AR Unity Package 10.0v
+- ARFoundation 4.1.7v
 <br />
 
 
