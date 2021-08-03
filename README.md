@@ -71,8 +71,8 @@
 * opencv-3.4.10-android-sdk
 * opencv.framework(*3.4.11 version)<br /><br />
  
-**\* As of August 3, 2021, the latest version of Unity and the latest version of each AR engine have been tested.**
-  * Unity3d 2021.1.6f1
+**\* As of August 3, 2021, the latest version of Unity3D and the latest version of each AR engine have been tested.**
+  * Unity3D 2021.1.6f1
   * MaxstAR 5.0.5v
   * EasyAR 4.3.0v
   * Vuforia Engine AR Unity Package 10.0v
