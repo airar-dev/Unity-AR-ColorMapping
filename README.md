@@ -71,7 +71,7 @@
 * opencv-3.4.10-android-sdk
 * opencv.framework(*3.4.11 version)<br /><br />
  
-<span style="color:yellow">**\* As of August 3, 2021, the latest version of Unity3D and the latest version of each AR engine have been tested.**</span>
+**\* As of August 3, 2021, the latest version of Unity3D and the latest version of each AR engine have been tested.**
   * Unity3D 2021.1.6f1
   * MaxstAR 5.0.5v
   * EasyAR 4.3.0v
@@ -100,7 +100,7 @@
  　-　Create an empty Unity3D project. <br /> <br />
 
 　**2. Import [MaxstAR](https://developer.maxst.com/MD/downloadsdk)** <br />
- 　-　Import MaxstAR SDK(5.0.2v). <br /> <br />
+ 　-　Import MaxstAR SDK(5.0.2v +). <br /> <br />
   
 　**3. Import Sample Package** <br />
 　-　After extracting the downloaded file, <br />
@@ -156,7 +156,7 @@
  　-　Create an empty Unity3D project. <br /> <br />
   
 　**2. Initialize [EasyAR](https://www.easyar.com/view/download.html)** <br />
-　-　EasyAR 3.1.0 Version required. <br />
+　-　EasyAR 3.1.0 Version + required. <br />
 　-　For EasyAR to work, a license key is required. <br /> <br />
  
 　**3. Import Sample Package** <br />
@@ -271,8 +271,8 @@
  　-　Create an empty Unity3D project. <br /> <br />
   
 　**2. Import ARFoundation Unity Package** <br />
-　-　Importing the ARFoundation(2.1.8v), <br />
-　　 ARCore(for Android)(2.1.11v), ARKit(for iOS)(2.1.9v) Unity Package. <br /> <br />
+　-　Importing the ARFoundation(2.1.8v +), <br />
+　　 ARCore(for Android)(2.1.11v +), ARKit(for iOS)(2.1.9v +) Unity Package. <br /> <br />
   
 　**3. Import Sample Package** <br />
 　-　After extracting the downloaded file, <br />
