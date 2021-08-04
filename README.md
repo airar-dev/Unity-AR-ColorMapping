@@ -339,7 +339,7 @@
 
 
 ## Future Release
-* The accuracy will be improved.
+* We will add a method for creating coloring 3D content in the near future.
 
 <br />
 
