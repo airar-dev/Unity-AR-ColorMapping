@@ -327,7 +327,8 @@
 ## Release
 | Version | New Features | Date |
 |:---:|---|:---:|
-| 　v1.3.1　 | [update all sample for Android/iOS](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/1.3.0) | 　2020.10.27　 |
+| 　v1.3.1　 | [the latest version of Unity3D and the latest version of each AR engine have been tested.](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/1.3.1) | 　2021.08.03　 |
+| 　v1.3.0　 | [update all sample for Android/iOS](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/1.3.0) | 　2020.10.27　 |
 | 　v1.2.1　 | [modify sample unitypackages for android](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/1.2.1) | 　2020.10.23　 |
 | v1.2.0 | [update android sample](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/v1.2.0) | 2020.10.23 |
 | v1.1.0 | [add iOS Library](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/3) | 2020.10.21 |
