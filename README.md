@@ -62,10 +62,21 @@
 
 ## Requirements
 
-* Unity3d 2019.3.14f1
+* Unity3D 2019.3.14f1
+* MaxstAR 5.0.2v
+* EasyAR 3.1.0v
+* Vuforia Engine AR Unity Package 9.5.4v
+* ARFoundation 2.1.8v
 * Visual Studio 2019
 * opencv-3.4.10-android-sdk
-* opencv.framework(*3.4.11 version)
+* opencv.framework(*3.4.11 version)<br /><br />
+ 
+**\* As of August 3, 2021, the latest version of Unity3D and the latest version of each AR engine have been tested.**
+  * Unity3D 2021.1.6f1
+  * MaxstAR 5.0.5v
+  * EasyAR 4.3.0v
+  * Vuforia Engine AR Unity Package 10.0v
+  * ARFoundation 4.1.7v
 
 <br />
 
@@ -89,7 +100,7 @@
  　-　Create an empty Unity3D project. <br /> <br />
 
 　**2. Import [MaxstAR](https://developer.maxst.com/MD/downloadsdk)** <br />
- 　-　Import MaxstAR SDK(5.0.2v). <br /> <br />
+ 　-　Import MaxstAR SDK(5.0.2v +). <br /> <br />
   
 　**3. Import Sample Package** <br />
 　-　After extracting the downloaded file, <br />
@@ -145,7 +156,7 @@
  　-　Create an empty Unity3D project. <br /> <br />
   
 　**2. Initialize [EasyAR](https://www.easyar.com/view/download.html)** <br />
-　-　EasyAR 3.1.0 Version required. <br />
+　-　EasyAR 3.1.0 Version + required. <br />
 　-　For EasyAR to work, a license key is required. <br /> <br />
  
 　**3. Import Sample Package** <br />
@@ -260,8 +271,8 @@
  　-　Create an empty Unity3D project. <br /> <br />
   
 　**2. Import ARFoundation Unity Package** <br />
-　-　Importing the ARFoundation(2.1.8v), <br />
-　　 ARCore(for Android)(2.1.11v), ARKit(for iOS)(2.1.9v) Unity Package. <br /> <br />
+　-　Importing the ARFoundation(2.1.8v +), <br />
+　　 ARCore(for Android)(2.1.11v +), ARKit(for iOS)(2.1.9v +) Unity Package. <br /> <br />
   
 　**3. Import Sample Package** <br />
 　-　After extracting the downloaded file, <br />
@@ -316,7 +327,8 @@
 ## Release
 | Version | New Features | Date |
 |:---:|---|:---:|
-| 　v1.3.1　 | [update all sample for Android/iOS](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/1.3.0) | 　2020.10.27　 |
+| 　v1.3.1　 | [the latest version of Unity3D and the latest version of each AR engine have been tested.](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/1.3.1) | 　2021.08.03　 |
+| 　v1.3.0　 | [update all sample for Android/iOS](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/1.3.0) | 　2020.10.27　 |
 | 　v1.2.1　 | [modify sample unitypackages for android](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/1.2.1) | 　2020.10.23　 |
 | v1.2.0 | [update android sample](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/v1.2.0) | 2020.10.23 |
 | v1.1.0 | [add iOS Library](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/3) | 2020.10.21 |
@@ -327,7 +339,7 @@
 
 
 ## Future Release
-* The accuracy will be improved.
+* We will add a method for creating coloring 3D content in the near future.
 
 <br />
 
