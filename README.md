@@ -78,6 +78,13 @@
   * Vuforia Engine AR Unity Package 10.0v
   * ARFoundation 4.1.7v
 
+**\* As of July 21, 2023, the latest version of Unity3D and the latest version of each AR engine have been tested.**
+  * Unity3D 2022.3.4f1
+  * MaxstAR 6.0.1v
+  * EasyAR 4.6.2v
+  * Vuforia Engine AR Unity Package 10.16.3v
+  * ARFoundation 5.0.6v
+
 <br />
 
 
