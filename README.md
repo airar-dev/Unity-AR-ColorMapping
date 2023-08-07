@@ -103,7 +103,7 @@
 
 ### with MaxstAR
 
-  **Android App Demo Video(https://youtu.be/RenJGqt2mvs)**<br /><br />
+  **Android App Demo Video(https://youtu.be/JhixOsRKQ5k)**<br /><br />
 
 　**1. Create Project** <br />
  　-　Create an empty Unity3D project. <br /> <br />
