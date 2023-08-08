@@ -163,6 +163,8 @@
  
 ### with EasyAR
 
+  **Create Android App Project Demo(https://youtu.be/CdXP0s78xvU)**<br />
+
 　**1. Create Project** <br />
  　-　Create an empty Unity3D project. <br /> <br />
   
