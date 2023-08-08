@@ -224,6 +224,8 @@
 
 ### with Vuforia
 
+  **Create Android App Project Demo(https://youtu.be/b5zSwDiwE4Q)**<br />
+
 　**1. Create Project** <br />
  　-　Create an empty Unity3D project. <br /> <br />
   
