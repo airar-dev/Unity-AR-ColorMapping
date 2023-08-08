@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/airar-dev/ColorMapping">
-    <img src="http://airar.co.kr/ColorMapping/Img/Default/logo_png.png" alt="Logo" width="80" height="80">
+    <img src="http://airar.co.kr/ColorMapping/Img/Default/logo_2023_N-01-W.png" alt="Logo" width="80" height="80">
   </a>
 
   <h1 align="center"> ColorMapping </h1>
