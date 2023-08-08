@@ -70,6 +70,8 @@
 * Visual Studio 2019
 * opencv-3.4.10-android-sdk
 * opencv.framework(*3.4.11 version)<br /><br />
+  The opencv library can be downloaded from the official website. Download version 3.4.11 of opencv.framework from the link below.
+  (https://opencv.org/releases/)
  
 **\* As of August 3, 2021, the latest version of Unity3D and the latest version of each AR engine have been tested.**
   * Unity3D 2021.1.6f1
