@@ -5,7 +5,7 @@
     <img src="http://airar.co.kr/ColorMapping/Img/Default/logo_2023_N-01-W.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h1 align="center"> ColorMapping </h1>
+  <h1 align="center"> AR ColorMapping </h1>
   
 <div align="center">
   
