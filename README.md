@@ -164,6 +164,7 @@
 ### with EasyAR
 
   **Create Android App Project Demo(https://youtu.be/elk7-E3LDYc)**<br />
+  **Create iOS App Project Demo(https://youtu.be/bcKe0nKg5fg)**<br /><br />
 
 　**1. Create Project** <br />
  　-　Create an empty Unity3D project. <br /> <br />
