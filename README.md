@@ -226,6 +226,7 @@
 ### with Vuforia
 
   **Create Android App Project Demo(https://youtu.be/b5zSwDiwE4Q)**<br />
+  **Create iOS App Project Demo(https://youtu.be/s1TcKE2PzXk)**<br /><br />
 
 　**1. Create Project** <br />
  　-　Create an empty Unity3D project. <br /> <br />
