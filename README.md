@@ -113,7 +113,7 @@ https://youtu.be/2-h8aBLddjY
 　**1. Create Project** <br />
  　-　Create an empty Unity3D project. <br /> <br />
 
-　**2. Import [MaxstAR](https://developer.maxst.com/MD/downloadsdk)** <br />
+　**2. Import [MaxstAR](https://developer.maxst.com/MD/downloadsdk)** <br /> 
  　-　Import MaxstAR SDK(5.0.2v +). <br /> <br />
   
 　**3. Import Sample Package** <br />
