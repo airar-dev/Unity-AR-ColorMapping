@@ -72,7 +72,7 @@ public class ARFoundationColorMapping : MonoBehaviour
 
         Texture2D screenShotTex = ScreenShot.GetScreenShot(arContents);
 
-        AirarManager.Instance.ProcessColoredMapTexture(screenShotTex, srcValue, realWidth, realHeight, (resultTex) =>
+        AirarManager.Instance.ProcessColoredMapTexture(screenShotTex, srcValue, realHeight, realWidth, (resultTex) =>
         {
             drawObj = GameObject.FindGameObjectWithTag("coloring");
             drawObj.GetComponent<Renderer>().material.mainTexture = resultTex;
