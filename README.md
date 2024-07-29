@@ -354,6 +354,7 @@ https://youtu.be/2-h8aBLddjY
 ## Release
 | Version | New Features | Date |
 |:---:|---|:---:|
+| 　v1.3.5　 | [the latest version of Unity3D and the latest version of ARFoundation have been tested.](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/1.3.5) | 　2024.07.29　 |
 | 　v1.3.4　 | [the latest version of Unity3D and the latest version of each AR engine have been tested.](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/1.3.4) | 　2023.07.21　 |
 | 　v1.3.3　 | [Upload samples compatible with the latest version of Vuforia](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/1.3.3) | 　2023.05.31　 |
 | 　v1.3.2　 | [Upload samples compatible with the latest version of Vuforia](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/1.3.2) | 　2022.11.30　 |
