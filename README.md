@@ -88,7 +88,11 @@
 
 **\* As of July 29, 2024, the latest version of Unity3D and the latest version of ARFoundation have been tested.**
   * Unity3D 2023.2.0f1
-  * ARFoundation 5.1.5v
+  * ARFoundation 5.1.5v<br /><br />
+
+**\* As of July 30, 2024, the latest version of Unity3D and the latest version of Vuforia have been tested.**
+  * Unity3D 2023.2.0f1
+  * Vuforia 10.25.4v
 
 <br />
 
@@ -239,7 +243,7 @@ https://youtu.be/2-h8aBLddjY
  　-　Create an empty Unity3D project. <br /> <br />
   
 　**2. Import Vuforia Unity Package** <br />
- 　-　Importing the Vuforia Engine AR Unity Package(9.5.4v +). <br /> <br />
+ 　-　Importing the Vuforia Engine AR Unity Package(9.5.4v +) and Vuforia Sample Package. <br /> <br />
 
 　**3. Import Sample Package** <br />
 　-　After extracting the downloaded file, <br />
@@ -354,6 +358,7 @@ https://youtu.be/2-h8aBLddjY
 ## Release
 | Version | New Features | Date |
 |:---:|---|:---:|
+| 　v1.3.6　 | [the latest version of Unity3D and the latest version of Vuforia have been tested.](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/1.3.6) | 　2024.07.30　 |
 | 　v1.3.5　 | [the latest version of Unity3D and the latest version of ARFoundation have been tested.](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/1.3.5) | 　2024.07.29　 |
 | 　v1.3.4　 | [the latest version of Unity3D and the latest version of each AR engine have been tested.](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/1.3.4) | 　2023.07.21　 |
 | 　v1.3.3　 | [Upload samples compatible with the latest version of Vuforia](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/1.3.3) | 　2023.05.31　 |
