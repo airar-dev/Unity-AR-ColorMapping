@@ -71,7 +71,7 @@
 * opencv-3.4.10-android-sdk
 * opencv.framework(*3.4.11 version)<br />
   The opencv library can be downloaded from the official website. <br />Download the opencv from this link (https://opencv.org/releases/).<br /><br />
- 
+  
 **\* As of August 3, 2021, the latest version of Unity3D and the latest version of each AR engine have been tested.**
   * Unity3D 2021.1.6f1
   * MaxstAR 5.0.5v
@@ -92,7 +92,11 @@
 
 **\* As of July 30, 2024, the latest version of Unity3D and the latest version of Vuforia have been tested.**
   * Unity3D 2023.2.0f1
-  * Vuforia 10.25.4v
+  * Vuforia 10.25.4v<br /><br />
+
+**\* As of Aug 9, 2024, multi-tracking supported ARFoundation samples have been updated.**
+  * Unity3D 2023.2.0f1
+  * ARFoundation 5.1.5v
 
 <br />
 
@@ -358,6 +362,7 @@ https://youtu.be/2-h8aBLddjY
 ## Release
 | Version | New Features | Date |
 |:---:|---|:---:|
+| 　v1.3.7　 | [multi-tracking supported ARFoundation samples have been updated.](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/1.3.7) | 　2024.08.09　 |
 | 　v1.3.6　 | [the latest version of Unity3D and the latest version of Vuforia have been tested.](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/1.3.6) | 　2024.07.30　 |
 | 　v1.3.5　 | [the latest version of Unity3D and the latest version of ARFoundation have been tested.](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/1.3.5) | 　2024.07.29　 |
 | 　v1.3.4　 | [the latest version of Unity3D and the latest version of each AR engine have been tested.](https://github.com/airar-dev/Unity-AR-ColorMapping/releases/tag/1.3.4) | 　2023.07.21　 |
